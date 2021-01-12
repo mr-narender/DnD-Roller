@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Juan Bracho">
+        <meta name="description"
+            content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
+        <!-- Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <title>DnD Roller</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+
+            </nav>
+        </header>
+        <!-- Dice Form -->
+        <section class="container">
+            <form>
+                <div class="row">
+                    <!-- Options -->
+                    <div class="col-4">
+                            <!-- Advantage -->
+                            <div class="row">
+                                <label for="advantage">Advantage</label>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox">
+                            </div>
+                            <!-- Disadvantage -->
+                            <div class="row">
+                                <label for="advantage">Disadvantage</label>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox">
+                            </div>
+                            <!-- Modifier -->
+                            <div class="row">
+                                <label for="advantage">Modifier</label>
+                            </div>
+                            <div class="row">
+                                <input type="text" class="col-6">
+                            </div>
+                            <!-- Clear Button -->
+                            <div class="row">
+                                <button>Clear</button>
+                            </div>
+                    </div>
+                    <!-- Dice -->
+                    <div class="col-8">
+                        <div class="row">
+                            <!-- d20 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d20.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                            <!-- d12 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d12.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                            <!-- d10 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d10.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                            <!-- d8 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d8.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                            <!-- d6 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d6.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                            <!-- d4 -->
+                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                <button>+</button>
+                            </div>
+                            <div class="col-4 responsive-image">
+                                <img src="assets/images/d4.png" alt="20-sided die">
+                            </div>
+                            <div class="col-4 d-flex align-items-center">
+                                <button>-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Roll Buttons -->
+                <div class="row">
+                    <div class="col-6">
+                        <button>ATK Roll</button>
+                    </div>
+                    <div class="col-6">
+                        <button>DMG Roll</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- Skills -->
+        <section class="container">
+            <button type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
+                Skills
+            </button>
+            <div id="skills-collapse" class="row collapse">
+                <div class="col-6 col-lg-4">
+                    <button>Acrobatics</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Animal Handling</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Arcana</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Athletics</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Deception</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>History</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Insight</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Intimidation</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Investigation</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Medicine</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Nature</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Perception</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Performance</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Persuasion</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Religion</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Sleight of Hand</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Stealth</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <button>Survival</button>
+                </div>
+            </div>
+        </section>
+        <!-- Results -->
+        <section>
+            <p id="dice-sum"></p>
+            <p>=</p>
+            <p>0</p>
+        </section>
+
+
+
+        <!-- External libraries -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

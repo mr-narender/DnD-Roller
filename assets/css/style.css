@@ -1,0 +1,20 @@
+body{
+    background-image: url('../images/stone-background.png');
+    background-repeat: repeat;
+    text-align: center;
+}
+
+.responsive-image img{
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 50px;
+    min-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
