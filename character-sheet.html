@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Juan Bracho">
+        <meta name="description"
+            content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
+        <!-- Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <title>DnD Roller</title>
+    </head>
+
+    <body>
+        <header class="container">
+            <nav class="navbar d-flex justify-content-center row">
+                <button id="burger-menu-button" type="button" class="navbar-toggler" data-toggle="collapse"
+                data-target="#drop-menu" aria-haspopup="true" aria-expanded="false" aria-label="Menu">
+                DnD Roller
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </button>
+                <div id="drop-menu" role="menu" class="collapse col-12" aria-labelledby="drop-menu">
+                    <ul>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="roll.html">Roller</a>
+                        </li>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="character-sheet.html">Character Sheet</a>
+                        </li>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="contact.html">Send Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Stats -->
+        <section class="container">
+            <form>
+                <div class="row">
+                    <!-- Ability Scores -->
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="str">STR</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="str" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="dex">DEX</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="dex" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="con">CON</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="con" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="int">INT</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="int" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="wis">WIS</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="wis" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="cha">CHA</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="cha" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modifiers -->
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="level">Level</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="level" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="attack-mod">Attack Mod</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="attack-mod" type="text">
+                            </div>
+                            <div class="col-12">
+                                <label for="damage-mod">Damage Mod</label>
+                            </div>
+                            <div class="col-12">
+                                <input name="damage-mod" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="container">
+            <form>
+                <div class="row">
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">Acrobatics</p>
+                            <input class="offset-4 col-2" type="checkbox" name="acrobatics-prof">
+                            <input class="col-2 form-control" type="text" name="acrobatics-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">Animal Handling</p>
+                            <input class="offset-4 col-2" type="checkbox" name="animal-handling-prof">
+                            <input class="col-2 form-control" type="text" name="animal-handling-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">Arcana</p>
+                            <input class="offset-4 col-2" type="checkbox" name="arcana-prof">
+                            <input class="col-2 form-control" type="text" name="arcana-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">Athletics</p>
+                            <input class="offset-4 col-2" type="checkbox" name="athletics-prof">
+                            <input class="col-2 form-control" type="text" name="athletics-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">Deception</p>
+                            <input class="offset-4 col-2" type="checkbox" name="deception-prof">
+                            <input class="col-2 form-control" type="text" name="deception-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="row">
+                            <p class="col-12">History</p>
+                            <input class="offset-4 col-2" type="checkbox" name="history-prof">
+                            <input class="col-2 form-control" type="text" name="history-mod">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Insight</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Intimidation</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Investigation</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Medicine</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Nature</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Perception</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Performance</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Persuasion</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Religion</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Sleight of Hand</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Stealth</button>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <button>Survival</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- External libraries -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -17,9 +17,26 @@
     </head>
 
     <body>
-        <header>
-            <nav class="navbar">
-
+        <header class="container">
+            <nav class="navbar d-flex justify-content-center row">
+                <button id="burger-menu-button" type="button" class="navbar-toggler" data-toggle="collapse"
+                data-target="#drop-menu" aria-haspopup="true" aria-expanded="false" aria-label="Menu">
+                DnD Roller
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </button>
+                <div id="drop-menu" role="menu" class="collapse col-12" aria-labelledby="drop-menu">
+                    <ul>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="roll.html">Roller</a>
+                        </li>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="character-sheet.html">Character Sheet</a>
+                        </li>
+                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                            <a class="dropdown-item" href="contact.html">Send Feedback</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <!-- Dice Form -->
@@ -30,91 +47,134 @@
                     <div class="col-4">
                             <!-- Advantage -->
                             <div class="row">
-                                <label for="advantage">Advantage</label>
+                                <div class="col-12">
+                                    <label for="advantage">Advantage</label>
+                                </div>
                             </div>
                             <div class="row">
-                                <input type="checkbox">
+                                <div class="col-12">
+                                    <input type="checkbox">
+                                </div>
                             </div>
                             <!-- Disadvantage -->
                             <div class="row">
-                                <label for="advantage">Disadvantage</label>
+                                <div class="col-12">
+                                    <label for="advantage">Disadvantage</label>
+                                </div>
                             </div>
                             <div class="row">
-                                <input type="checkbox">
+                                <div class="col-12">
+                                    <input type="checkbox">
+                                </div>
                             </div>
                             <!-- Modifier -->
                             <div class="row">
-                                <label for="advantage">Modifier</label>
+                                <div class="col-12">
+                                    <label for="advantage">Modifier</label>
+                                </div>
                             </div>
                             <div class="row">
-                                <input type="text" class="col-6">
+                                <div class="col-12">
+                                    <input type="text" class="form-control col-6 offset-3">
+                                </div>
+                            </div>
+                            <!-- Proficiency -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="advantage">Proficiency</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="checkbox" checked>
+                                </div>
                             </div>
                             <!-- Clear Button -->
                             <div class="row">
-                                <button>Clear</button>
+                                <div class="col-12">
+                                    <button>Clear</button>
+                                </div>
                             </div>
                     </div>
                     <!-- Dice -->
                     <div class="col-8">
                         <div class="row">
                             <!-- d20 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                             <!-- d12 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d12.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                             <!-- d10 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d10.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                             <!-- d8 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d8.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                             <!-- d6 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d6.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                             <!-- d4 -->
-                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                <button>+</button>
+                            <div class="col-4 d-flex align-items-center">
+                                <input type="text" value="0" class="form-control">
                             </div>
-                            <div class="col-4 responsive-image">
+                            <div class="col-4 responsive-dice">
                                 <img src="assets/images/d4.png" alt="20-sided die">
                             </div>
-                            <div class="col-4 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center">
+                                <button>+</button>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
                                 <button>-</button>
                             </div>
                         </div>
@@ -135,6 +195,7 @@
         <section class="container">
             <button type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
                 Skills
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
             </button>
             <div id="skills-collapse" class="row collapse">
                 <div class="col-6 col-lg-4">
