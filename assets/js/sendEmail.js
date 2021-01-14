@@ -1,3 +1,4 @@
+// Sends email to the developer with the values in the contact form.
 function sendEmail(contactForm) {
     console.log(contactForm);
     emailjs.send("service_k93x9k9", "template_t0amjk4", {

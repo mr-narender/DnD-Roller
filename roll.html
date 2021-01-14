@@ -45,54 +45,58 @@
                 <div class="row">
                     <!-- Options -->
                     <div class="col-4">
-                            <!-- Advantage -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="advantage">Advantage</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <input type="checkbox">
-                                </div>
-                            </div>
-                            <!-- Disadvantage -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="advantage">Disadvantage</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <input type="checkbox">
-                                </div>
-                            </div>
                             <!-- Modifier -->
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="advantage">Modifier</label>
+                                    <label for="modifier">Modifier</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="text" class="form-control col-6 offset-3">
+                                    <input type="text" name="modifier" value="0" class="form-control col-6 offset-3">
                                 </div>
                             </div>
                             <!-- Proficiency -->
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="advantage">Proficiency</label>
+                                    <label for="proficiency">Proficiency</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="proficiency" checked>
+                                </div>
+                            </div>
+                            <!-- Advantage -->
+                            <div class="row">
+                                <div class="col-12 form-group">
+                                    <label for="advantage-menu">Advantage/Disadvantage</label>
+                                    <select class="form-control" id="advantage-menu">
+                                        <option>None</option>
+                                        <option>Advantage</option>
+                                        <option>Disadvantage</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Ability to Use -->
+                            <div class="row">
+                                <div class="col-12 form-group">
+                                    <label for="ability-menu">Select Ability to use</label>
+                                    <select class="form-control" id="ability-menu">
+                                        <option>None</option>
+                                        <option>STR</option>
+                                        <option>DEX</option>
+                                        <option>CON</option>
+                                        <option>INT</option>
+                                        <option>WIS</option>
+                                        <option>CHA</option>
+                                    </select>
                                 </div>
                             </div>
                             <!-- Clear Button -->
                             <div class="row">
                                 <div class="col-12">
-                                    <button>Clear</button>
+                                    <button>Clear Dice</button>
                                 </div>
                             </div>
                     </div>
@@ -101,81 +105,81 @@
                         <div class="row">
                             <!-- d20 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d20" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d20');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d20');">-</button>
                             </div>
                             <!-- d12 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d12" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
-                                <img src="assets/images/d12.png" alt="20-sided die">
+                                <img src="assets/images/d12.png" alt="12-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d12');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d12');">-</button>
                             </div>
                             <!-- d10 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d10" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
-                                <img src="assets/images/d10.png" alt="20-sided die">
+                                <img src="assets/images/d10.png" alt="10-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d10');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d10');">-</button>
                             </div>
                             <!-- d8 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d8" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
-                                <img src="assets/images/d8.png" alt="20-sided die">
+                                <img src="assets/images/d8.png" alt="8-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d8');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d8');">-</button>
                             </div>
                             <!-- d6 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d6" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
-                                <img src="assets/images/d6.png" alt="20-sided die">
+                                <img src="assets/images/d6.png" alt="6-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d6');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d6');">-</button>
                             </div>
                             <!-- d4 -->
                             <div class="col-4 d-flex align-items-center">
-                                <input type="text" value="0" class="form-control">
+                                <input type="text" value="0" name="d4" class="form-control">
                             </div>
                             <div class="col-4 responsive-dice">
-                                <img src="assets/images/d4.png" alt="20-sided die">
+                                <img src="assets/images/d4.png" alt="4-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>+</button>
+                                <button onclick="return addDice('d4');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button>-</button>
+                                <button onclick="return substractDice('d4');">-</button>
                             </div>
                         </div>
                     </div>
@@ -183,7 +187,7 @@
                 <!-- Roll Buttons -->
                 <div class="row">
                     <div class="col-6">
-                        <button>ATK Roll</button>
+                        <button onclick="return atkRoll();">ATK Roll</button>
                     </div>
                     <div class="col-6">
                         <button>DMG Roll</button>
@@ -258,11 +262,21 @@
         <section>
             <p id="dice-sum"></p>
             <p>=</p>
-            <p>0</p>
+            <p id="result">0</p>
         </section>
 
-
-
+        <!-- Local libraries -->
+        <script src="assets/js/addDice.js"></script>
+        <script src="assets/js/substractDice.js"></script>
+        <script src="assets/js/roll20.js"></script>
+        <script src="assets/js/roll12.js"></script>
+        <script src="assets/js/roll10.js"></script>
+        <script src="assets/js/roll8.js"></script>
+        <script src="assets/js/roll6.js"></script>
+        <script src="assets/js/roll4.js"></script>
+        <script src="assets/js/atkRoll.js"></script>
+        <script src="assets/js/dmgRoll.js"></script>
+        <script src="assets/js/addModifiers.js"></script>
         <!-- External libraries -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

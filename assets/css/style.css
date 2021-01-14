@@ -63,8 +63,6 @@ nav li{
     display: flex;
 }
 
-
-
 /*--------------------------------Skills */
 
 #skills input{
@@ -73,4 +71,12 @@ nav li{
     width:30px;
     height: 30px;
     position: relative;
+}
+
+.crit-hit{
+    color: green;
+}
+
+.crit-miss{
+    color: red;
 }

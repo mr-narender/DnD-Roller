@@ -4,6 +4,7 @@ function calculateProf(level) {
         // Replaces the text in the input field with its floor value, since ability scores should only be integers.
         $(`input[name = "${level.name}"]`).val(Math.floor(level.value)); 
         $(`label[for = "${level.name}"]`).html(`Level (+${(prof)})`);
+        localStorage.setItem('prof', `${prof}`);
     } else {
         console.log("Invalid Level");
     }
