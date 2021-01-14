@@ -21,14 +21,13 @@ function atkRoll() {
             $("#dice-sum").append(`${result} + `);
         }
         $("#result").html(+$("#result").html() + result);
-    // Adds modifiers whenever applicable.
+    // Adds ability modifiers whenever applicable.
     if ($("#ability-menu").val() === "None") {
-        addModifiers(parseInt($(`input[name = "modifier"]`).val()));
     } else {
         let abilityMod = localStorage.getItem(`${$("#ability-menu").val().toLowerCase()}`); 
         addModifiers(parseInt(abilityMod));
-        addModifiers(parseInt($(`input[name = "modifier"]`).val()));
     }
-
+    // Adds other modifiers.
+    addModifiers(parseInt($(`input[name = "modifier"]`).val()));
     return false;
 }
