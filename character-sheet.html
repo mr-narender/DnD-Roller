@@ -50,37 +50,37 @@
                                 <label for="str">STR</label>
                             </div>
                             <div class="col-12">
-                                <input name="str" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="str" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="dex">DEX</label>
                             </div>
                             <div class="col-12">
-                                <input name="dex" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="dex" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="con">CON</label>
                             </div>
                             <div class="col-12">
-                                <input name="con" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="con" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="int">INT</label>
                             </div>
                             <div class="col-12">
-                                <input name="int" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="int" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="wis">WIS</label>
                             </div>
                             <div class="col-12">
-                                <input name="wis" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="wis" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="cha">CHA</label>
                             </div>
                             <div class="col-12">
-                                <input name="cha" type="text">
+                                <input onblur="calculateAbilityMod(this);" name="cha" type="text">
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 <label for="level">Level</label>
                             </div>
                             <div class="col-12">
-                                <input name="level" type="text">
+                                <input onblur="calculateProf(this);" name="level" type="text">
                             </div>
                             <div class="col-12">
                                 <label for="attack-mod">Attack Mod</label>
@@ -195,7 +195,10 @@
                 </div>
             </form>
         </section>
-
+        <!-- Local libraries -->
+        <script src="assets/js/calculateSkillMod.js"></script>
+        <script src="assets/js/calculateProf.js"></script>
+        <script src="assets/js/calculateAbilityMod.js"></script>
         <!-- External libraries -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
