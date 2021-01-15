@@ -4,12 +4,12 @@ function dmgRoll() {
     $("#result").html("");
     $("#dice-sum").html("");
     // Roll all dice selected in form.
-    roll20(parseInt($(`input[name = "d20"]`).val()));
-    roll12(parseInt($(`input[name = "d12"]`).val()));
-    roll10(parseInt($(`input[name = "d10"]`).val()));
-    roll8(parseInt($(`input[name = "d8"]`).val()));
-    roll6(parseInt($(`input[name = "d6"]`).val()));
-    roll4(parseInt($(`input[name = "d4"]`).val()));
+    rollDice(parseInt($(`input[name = "d20"]`).val()), 20);
+    rollDice(parseInt($(`input[name = "d12"]`).val()), 12);
+    rollDice(parseInt($(`input[name = "d10"]`).val()), 10);
+    rollDice(parseInt($(`input[name = "d8"]`).val()), 8);
+    rollDice(parseInt($(`input[name = "d6"]`).val()), 6);
+    rollDice(parseInt($(`input[name = "d4"]`).val()), 4);
     // Adds ability modifiers whenever applicable.
     if ($("#ability-menu").val() !== "None") {
         let abilityMod = localStorage.getItem(`${$("#ability-menu").val().toLowerCase()}`); 
@@ -21,6 +21,9 @@ function dmgRoll() {
     if ($(`input[name = "proficiency"]`).prop("checked")) {
         addModifiers(parseInt(localStorage.prof));
     }
-    //clearDice();
+    clearDice();
+    // Clears the last "+" in input.
+    let final = $("#dice-sum").html().slice(0, -3);
+    $("#dice-sum").html(final);  
     return false;
 }

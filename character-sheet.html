@@ -116,81 +116,129 @@
                 <div class="row">
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">Acrobatics</p>
-                            <input class="offset-4 col-2" type="checkbox" name="acrobatics-prof">
-                            <input class="col-2 form-control" type="text" name="acrobatics-mod">
+                            <label class="col-12" title="Acrobatics" for="acrobatics">Acrobatics</label>
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-4" type="checkbox" name="acrobatics-prof">
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-2 form-control" value="0" type="text" name="acrobatics-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">Animal Handling</p>
-                            <input class="offset-4 col-2" type="checkbox" name="animal-handling-prof">
-                            <input class="col-2 form-control" type="text" name="animal-handling-mod">
+                            <label class="col-12" title="Animal Handling" for="animalhandling">Animal Handling</label>
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-4" type="checkbox" name="animalhandling-prof">
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-2 form-control" value="0" type="text" name="animalhandling-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">Arcana</p>
-                            <input class="offset-4 col-2" type="checkbox" name="arcana-prof">
-                            <input class="col-2 form-control" type="text" name="arcana-mod">
+                            <label class="col-12" title="Arcana" for="arcana">Arcana</label>
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-4" type="checkbox" name="arcana-prof">
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-2 form-control" value="0" type="text" name="arcana-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">Athletics</p>
-                            <input class="offset-4 col-2" type="checkbox" name="athletics-prof">
-                            <input class="col-2 form-control" type="text" name="athletics-mod">
+                            <label class="col-12" title="Athletics" for="athletics">Athletics</label>
+                            <input onblur="return calculateSkillMod(this, 'str')" class="offset-4" type="checkbox" name="athletics-prof">
+                            <input onblur="return calculateSkillMod(this, 'str')" class="offset-2 form-control" value="0" type="text" name="athletics-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">Deception</p>
-                            <input class="offset-4 col-2" type="checkbox" name="deception-prof">
-                            <input class="col-2 form-control" type="text" name="deception-mod">
+                            <label class="col-12" title="Deception" for="deception">Deception</label>
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-4" type="checkbox" name="deception-prof">
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-2 form-control" value="0" type="text" name="deception-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
                         <div class="row">
-                            <p class="col-12">History</p>
-                            <input class="offset-4 col-2" type="checkbox" name="history-prof">
-                            <input class="col-2 form-control" type="text" name="history-mod">
+                            <label class="col-12" title="History" for="history">History</label>
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-4" type="checkbox" name="history-prof">
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-2 form-control" value="0" type="text" name="history-mod">
                         </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Insight</button>
+                        <div class="row">
+                            <label class="col-12" title="Insight" for="insight">Insight</label>
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-4" type="checkbox" name="insight-prof">
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-2 form-control" value="0" type="text" name="insight-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Intimidation</button>
+                        <div class="row">
+                            <label class="col-12" title="Intimidation" for="intimidation">Intimidation</label>
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-4" type="checkbox" name="intimidation-prof">
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-2 form-control" value="0" type="text" name="intimidation-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Investigation</button>
+                        <div class="row">
+                            <label class="col-12" title="Investigation" for="investigation">Investigation</label>
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-4" type="checkbox" name="investigation-prof">
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-2 form-control" value="0" type="text" name="investigation-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Medicine</button>
+                        <div class="row">
+                            <label class="col-12" title="Medicine" for="medicine">Medicine</label>
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-4" type="checkbox" name="medicine-prof">
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-2 form-control" value="0" type="text" name="medicine-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Nature</button>
+                        <div class="row">
+                            <label class="col-12" title="Nature" for="nature">Nature</label>
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-4" type="checkbox" name="nature-prof">
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-2 form-control" value="0" type="text" name="nature-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Perception</button>
+                        <div class="row">
+                            <label class="col-12" title="Perception" for="perception">Perception</label>
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-4" type="checkbox" name="perception-prof">
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-2 form-control" value="0" type="text" name="perception-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Performance</button>
+                        <div class="row">
+                            <label class="col-12" title="Performance" for="performance">Performance</label>
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-4" type="checkbox" name="performance-prof">
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-2 form-control" value="0" type="text" name="performance-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Persuasion</button>
+                        <div class="row">
+                            <label class="col-12" title="Persuasion" for="persuasion">Persuasion</label>
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-4" type="checkbox" name="persuasion-prof">
+                            <input onblur="return calculateSkillMod(this, 'cha')" class="offset-2 form-control" value="0" type="text" name="persuasion-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Religion</button>
+                        <div class="row">
+                            <label class="col-12" title="Religion" for="religion">Religion</label>
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-4" type="checkbox" name="religion-prof">
+                            <input onblur="return calculateSkillMod(this, 'int')" class="offset-2 form-control" value="0" type="text" name="religion-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Sleight of Hand</button>
+                        <div class="row">
+                            <label class="col-12" title="Sleight of Hand" for="sleightofhand">Sleight of Hand</label>
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-4" type="checkbox" name="sleightofhand-prof">
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-2 form-control" value="0" type="text" name="sleightofhand-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Stealth</button>
+                        <div class="row">
+                            <label class="col-12" title="Stealth" for="stealth">Stealth</label>
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-4" type="checkbox" name="stealth-prof">
+                            <input onblur="return calculateSkillMod(this, 'dex')" class="offset-2 form-control" value="0" type="text" name="stealth-mod">
+                        </div>
                     </div>
                     <div class="col-6 col-lg-4">
-                        <button>Survival</button>
+                        <div class="row">
+                            <label class="col-12" title="Survival" for="survival">Survival</label>
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-4" type="checkbox" name="survival-prof">
+                            <input onblur="return calculateSkillMod(this, 'wis')" class="offset-2 form-control" value="0" type="text" name="survival-mod">
+                        </div>
                     </div>
                 </div>
             </form>

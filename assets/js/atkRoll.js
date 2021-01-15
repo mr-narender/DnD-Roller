@@ -9,7 +9,7 @@ function atkRoll() {
         result = Math.max(result, result2);
     } else if ($("#advantage-menu").val() === "Disadvantage") {
         let result2 = Math.floor((Math.random() * 20) + 1);
-        result = Math.min(result1, result2);
+        result = Math.min(result, result2);
     } else {
     }
     // Colors the dice roll's text green if it is 20, or red if it is 1.
@@ -29,5 +29,8 @@ function atkRoll() {
     }
     // Adds other modifiers.
     addModifiers(parseInt($(`input[name = "modifier"]`).val()));
+    // Clears the last "+" in input.
+    let final = $("#dice-sum").html().slice(0, -3);
+    $("#dice-sum").html(final);    
     return false;
 }

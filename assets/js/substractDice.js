@@ -2,7 +2,6 @@
 function substractDice (die) {
     if (0 < +$(`input[name = "${die}"]`).val()) {
         $(`input[name = "${die}"]`).val(+$(`input[name = "${die}"]`).val() - 1); 
-        console.log($(`input[name = "${die}"]`).val());
     } else {
         console.log("Can't roll negative dice");
     }
