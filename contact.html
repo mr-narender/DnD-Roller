@@ -53,7 +53,7 @@
                     <h2>Send an email to the developer</h2>
                 </div>
             </div>
-            <form onsubmit="return sendEmail(this);">
+            <form id="contact-form" onsubmit="return sendEmail(this);">
                 <div class="form-group">
                     <label for="email-address" class="col-form-label">Email:</label>
                     <input type="email" class="form-control"  name="emailaddress"
@@ -68,7 +68,7 @@
                     <label for="email-content" class="col-form-label">Content:</label>
                     <textarea rows="5" name="emailmessage" class="form-control" placeholder="Message" required></textarea>
                 </div>
-                <button type="submit" class="btn hvr-fade" data-target="#acknowledge-modal" data-toggle="modal">Submit</button>
+                <button type="submit" class="btn hvr-fade">Submit</button>
             </form>
         </section>
         <div class="modal fade" id="acknowledge-modal" tabindex="-1" role="dialog" aria-labelledby="acknowledge-modal"
