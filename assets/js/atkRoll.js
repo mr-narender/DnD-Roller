@@ -28,6 +28,7 @@ function atkRoll() {
         addModifiers(parseInt(abilityMod));
     }
     // Adds other modifiers.
+    addModifiers(parseInt(localStorage.getItem('attack-mod')));
     addModifiers(parseInt($(`input[name = "modifier"]`).val()));
     // Clears the last "+" in input.
     let final = $("#dice-sum").html().slice(0, -3);

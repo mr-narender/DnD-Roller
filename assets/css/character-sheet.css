@@ -1,0 +1,11 @@
+/*--------------------------------Skills */
+#skills input{
+    padding: 0px;
+    width:30px;
+    height: 30px;
+    position: relative;
+}
+
+#skills{
+    border-bottom: none;
+}

@@ -1,0 +1,72 @@
+/*--------------------------------Fonts */
+
+@font-face {
+    font-family: 'dalelands_uncialbold';
+    src: url('../fonts/dalelandsuncialbold-82za-webfont.woff2') format('woff2'),
+         url('../fonts/dalelandsuncialbold-82za-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'draconisregular';
+    src: url('../fonts/draconis-jrw6b-webfont.woff2') format('woff2'),
+         url('../fonts/draconis-jrw6b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*--------------------------------Whole Page */
+
+body{
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    text-align: center;
+    font-family: 'draconisregular', sans-serif;
+    font-size: larger;
+    scroll-behavior: smooth;
+}
+
+button{
+    background-image: url('../images/stone-background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-color: burlywood;
+}
+
+section{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.border-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: double;
+}
+
+/*--------------------------------Menu */
+
+#burger-menu-button{
+    background-image: url('../images/black-scales.png');
+    background-repeat: repeat;
+    color: red;
+    font-family: 'dalelands_uncialbold';
+}
+
+/* Centers the nav menu */
+nav ul{
+    padding-left: 0px;
+}
+
+/* Removes list dots from nav menu */
+nav li{
+    list-style: none;
+}
+
+input{
+    text-align: center;
+}
+

@@ -1,3 +1,4 @@
+// Resets the inputs for the number of dice to roll back to "0".
 function clearDice() {
     $(`input[name = "d20"]`).val(0);
     $(`input[name = "d12"]`).val(0);
