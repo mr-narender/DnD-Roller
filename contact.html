@@ -1,104 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Juan Bracho">
-        <meta name="description"
-            content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
-        <!-- Libraries -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-        <link rel="stylesheet" href="assets/css/common.css">
-        <link rel="stylesheet" href="assets/css/contact.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <title>DnD Roller</title>
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("user_8HlRxslkboMpSfraHqGLC");
-            })
-        </script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Bracho">
+    <meta name="description"
+        content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>DnD Roller</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_8HlRxslkboMpSfraHqGLC");
+        })
+    </script>
+</head>
 
-    <body>
-        <header class="container">
-            <nav class="navbar d-flex justify-content-center row">
-                <button id="burger-menu-button" type="button" class="navbar-toggler" data-toggle="collapse"
+<body>
+    <header class="container">
+        <nav class="navbar d-flex justify-content-center row">
+            <button id="burger-menu-button" type="button" class="navbar-toggler" data-toggle="collapse"
                 data-target="#drop-menu" aria-haspopup="true" aria-expanded="false" aria-label="Menu">
                 DnD Roller
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
-                <div id="drop-menu" role="menu" class="collapse col-12" aria-labelledby="drop-menu">
-                    <ul>
-                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
-                            <a class="dropdown-item" href="roll.html">Roller</a>
-                        </li>
-                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
-                            <a class="dropdown-item" href="character-sheet.html">Character Sheet</a>
-                        </li>
-                        <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
-                            <a class="dropdown-item" href="contact.html">Send Feedback</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <section class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Send an email to the developer</h2>
-                </div>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div id="drop-menu" role="menu" class="collapse col-12" aria-labelledby="drop-menu">
+                <ul>
+                    <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                        <a class="dropdown-item" href="roll.html">Roller</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                        <a class="dropdown-item" href="character-sheet.html">Character Sheet</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
+                        <a class="dropdown-item" href="contact.html">Send Feedback</a>
+                    </li>
+                </ul>
             </div>
-            <form id="contact-form" onsubmit="return sendEmail(this);">
-                <div class="form-group">
-                    <label for="email-address" class="col-form-label">Email:</label>
-                    <input type="email" class="form-control"  name="emailaddress"
-                        placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <label for="email-subject" class="col-form-label">Subject:</label>
-                    <input type="text" class="form-control"  name="emailsubject" placeholder="Subject"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="email-content" class="col-form-label">Content:</label>
-                    <textarea rows="5" name="emailmessage" class="form-control" placeholder="Message" required></textarea>
-                </div>
-                <button type="submit" class="btn hvr-fade">Submit</button>
-            </form>
-        </section>
-        <div class="modal fade" id="acknowledge-modal" tabindex="-1" role="dialog" aria-labelledby="acknowledge-modal"
+        </nav>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Send an email to the developer</h2>
+            </div>
+        </div>
+        <form id="contact-form" onsubmit="return sendEmail(this);">
+            <div class="form-group">
+                <label for="email-address" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" name="emailaddress" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="email-subject" class="col-form-label">Subject:</label>
+                <input type="text" class="form-control" name="emailsubject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="email-content" class="col-form-label">Content:</label>
+                <textarea rows="5" name="emailmessage" class="form-control" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn hvr-fade">Submit</button>
+        </form>
+    </section>
+    <div class="modal fade" id="acknowledge-modal" tabindex="-1" role="dialog" aria-labelledby="acknowledge-modal"
         aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div id="modal-message" class="modal-body container">
-                        <div class="row">
-                            <p class="col-10">Your email has been sent. The developer will respond as soon as possible, you may close this window.</p>
-                            <button type="button" class="close col-2" data-dismiss="modal" aria-label="Close">
-                                <i class="fa fa-window-close"></i>
-                            </button>
-                        </div>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div id="modal-message" class="modal-body container">
+                    <div class="row">
+                        <p class="col-10">Your email has been sent. The developer will respond as soon as possible, you
+                            may close this window.</p>
+                        <button type="button" class="close col-2" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-window-close"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Local libraries -->
-        <script src="assets/js/sendEmail.js"></script>
-        <!-- External libraries -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    </body>
+    </div>
+    <!-- Local libraries -->
+    <script src="assets/js/lib/feedback/init.js"></script>
+    <!-- External libraries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>

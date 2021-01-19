@@ -106,9 +106,10 @@
                 <div class="col-6 col-lg-4">
                     <div class="row justify-content-center step-5">
                         <label class="col-12" title="Acrobatics" for="acrobatics">Acrobatics</label>
-                        <input class="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="acrobatics-prof">
-                        <input class="offset-1 form-control step-7" onblur="return calculateSkillMod(this, 'dex')" value="0"
-                            type="text" name="acrobatics-mod">
+                        <input class="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox"
+                            name="acrobatics-prof">
+                        <input class="offset-1 form-control step-7" onblur="return calculateSkillMod(this, 'dex')"
+                            value="0" type="text" name="acrobatics-mod">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -252,11 +253,9 @@
         </form>
     </section>
     <!-- Local libraries -->
-    <script src="assets/js/calculateSkillMod.js"></script>
-    <script src="assets/js/calculateProf.js"></script>
-    <script src="assets/js/calculateAbilityMod.js"></script>
-    <script src="assets/js/characterSheetTutorial.js"></script>
-    <script src="assets/js/calculateAtkDmgMod.js"></script>
+    <script src="assets/js/lib/character/init.js"></script>
+    <script src="assets/js/lib/tutorial/init.js"></script>
+
     <!-- External libraries -->
     <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
