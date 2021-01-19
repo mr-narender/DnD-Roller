@@ -2,7 +2,7 @@ function characterSheetTutorial() {
     let tutorial = introJs();
     tutorial.setOptions({
         steps: [{
-            intro: 'Greetings adventurer, I am the DM. I will guide you through this quest.<br> <img style="width: 120px; height: 100px;" src="/assets/images/dm.png" alt="DM">'
+            intro: 'Greetings adventurer, I am the DM. I will guide you through this quest.<br> <img style="width: 120px; height: 100px;" src="assets/images/dm.png" alt="DM">'
         }, {
             element: document.getElementsByClassName('step-1')[0],
             intro: "These is one of your <b>Ability Scores</b> for your character, they accept any value from 1 to 30, once clicked off the field they will show the modifier next to their labels."

@@ -2,7 +2,7 @@ function rollTutorial() {
     let tutorial = introJs();
     tutorial.setOptions({
         steps: [{
-            intro: 'Hail adventurer, I am the DM. It seems like you need a helping hand.<br><img style="width: 120px; height: 100px;" src="/assets/images/dm.png" alt="DM">'
+            intro: 'Hail adventurer, I am the DM. It seems like you need a helping hand.<br><img style="width: 120px; height: 100px;" src="assets/images/dm.png" alt="DM">'
         }, {
             element: document.getElementsByClassName('step-1')[0],
             intro: "This is a 20 sided die, we call it a <b>'d20'</b>.",
