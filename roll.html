@@ -42,7 +42,7 @@
             </nav>
         </header>
         <!-- Tutorial -->
-        <button onclick="rollTutorial();">Help me</button>
+        <button class="btn" onclick="rollTutorial();">Help me</button>
         <!-- Dice Form -->
         <section class="container">
             <form>
@@ -58,10 +58,10 @@
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center step-3">
-                                <button onclick="return addDice('d20');">+</button>
+                                <button class="btn" onclick="return addDice('d20');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center step-4">
-                                <button onclick="return substractDice('d20');">-</button>
+                                <button class="btn" onclick="return substractDice('d20');">-</button>
                             </div>
                             <!-- d12 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -71,10 +71,10 @@
                                 <img src="assets/images/d12.png" alt="12-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return addDice('d12');">+</button>
+                                <button class="btn" onclick="return addDice('d12');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return substractDice('d12');">-</button>
+                                <button class="btn" onclick="return substractDice('d12');">-</button>
                             </div>
                             <!-- d10 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -84,10 +84,10 @@
                                 <img src="assets/images/d10.png" alt="10-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return addDice('d10');">+</button>
+                                <button class="btn" onclick="return addDice('d10');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return substractDice('d10');">-</button>
+                                <button class="btn" onclick="return substractDice('d10');">-</button>
                             </div>
                             <!-- d8 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -97,10 +97,10 @@
                                 <img src="assets/images/d8.png" alt="8-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return addDice('d8');">+</button>
+                                <button class="btn" onclick="return addDice('d8');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return substractDice('d8');">-</button>
+                                <button class="btn" onclick="return substractDice('d8');">-</button>
                             </div>
                             <!-- d6 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -110,10 +110,10 @@
                                 <img src="assets/images/d6.png" alt="6-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return addDice('d6');">+</button>
+                                <button class="btn" onclick="return addDice('d6');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return substractDice('d6');">-</button>
+                                <button class="btn" onclick="return substractDice('d6');">-</button>
                             </div>
                             <!-- d4 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -123,10 +123,10 @@
                                 <img src="assets/images/d4.png" alt="4-sided die">
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return addDice('d4');">+</button>
+                                <button class="btn" onclick="return addDice('d4');">+</button>
                             </div>
                             <div class="col-2 d-flex align-items-center">
-                                <button onclick="return substractDice('d4');">-</button>
+                                <button class="btn" onclick="return substractDice('d4');">-</button>
                             </div>
                         </div>
                     </div>
@@ -186,64 +186,64 @@
         </section>
         <!-- Skills -->
         <section class="container border-section">
-            <button class="step-9" type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
+            <button class="btn step-9" type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
                 Skills
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
             </button>
             <div id="skills-collapse" class="row collapse">
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('acrobatics');">Acrobatics</button>
+                    <button class="btn" onclick="return skillRoll('acrobatics');">Acrobatics</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('animalhandling');">Animal Handling</button>
+                    <button class="btn" onclick="return skillRoll('animalhandling');">Animal Handling</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('arcana');">Arcana</button>
+                    <button class="btn" onclick="return skillRoll('arcana');">Arcana</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('athletics');">Athletics</button>
+                    <button class="btn" onclick="return skillRoll('athletics');">Athletics</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('deception');">Deception</button>
+                    <button class="btn" onclick="return skillRoll('deception');">Deception</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('history');">History</button>
+                    <button class="btn" onclick="return skillRoll('history');">History</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('insight');">Insight</button>
+                    <button class="btn" onclick="return skillRoll('insight');">Insight</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('intimidation');">Intimidation</button>
+                    <button class="btn" onclick="return skillRoll('intimidation');">Intimidation</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('investigation');">Investigation</button>
+                    <button class="btn" onclick="return skillRoll('investigation');">Investigation</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('medicine');">Medicine</button>
+                    <button class="btn" onclick="return skillRoll('medicine');">Medicine</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('nature');">Nature</button>
+                    <button class="btn" onclick="return skillRoll('nature');">Nature</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('perception');">Perception</button>
+                    <button class="btn" onclick="return skillRoll('perception');">Perception</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('performance');">Performance</button>
+                    <button class="btn" onclick="return skillRoll('performance');">Performance</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('persuasion');">Persuasion</button>
+                    <button class="btn" onclick="return skillRoll('persuasion');">Persuasion</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('religion');">Religion</button>
+                    <button class="btn" onclick="return skillRoll('religion');">Religion</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('sleightofhand');">Sleight of Hand</button>
+                    <button class="btn" onclick="return skillRoll('sleightofhand');">Sleight of Hand</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('stealth');">Stealth</button>
+                    <button class="btn" onclick="return skillRoll('stealth');">Stealth</button>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <button onclick="return skillRoll('survival');">Survival</button>
+                    <button class="btn" onclick="return skillRoll('survival');">Survival</button>
                 </div>
             </div>
         </section>
@@ -252,15 +252,15 @@
             <div class="row">
                 <!-- ATK Roll Button -->
                 <div class="col-4">
-                    <button class="step-10" onclick="return atkRoll();">ATK Roll</button>
+                    <button class="btn step-10" onclick="return atkRoll();">ATK Roll</button>
                 </div>
                  <!-- Clear Button -->
                 <div class="col-4">
-                    <button class="step-11" onclick="return clearDice();">Clear Dice</button>
+                    <button class="btn step-11" onclick="return clearDice();">Clear Dice</button>
                 </div>
                 <!-- Free Roll Button -->
                 <div class="col-4">
-                    <button class="step-12" onclick="return freeRoll();">Free Roll</button>
+                    <button class="btn step-12" onclick="return freeRoll();">Free Roll</button>
                 </div>
             </div>
         </section>   

@@ -21,19 +21,18 @@
 /*--------------------------------Whole Page */
 
 body{
-    background-image: url('../images/background.png');
+    background-image: url('../images/black-scales.png');
     background-repeat: repeat;
     text-align: center;
     font-family: 'draconisregular', sans-serif;
     font-size: larger;
     scroll-behavior: smooth;
+    color: ghostwhite;
 }
 
-button{
-    background-image: url('../images/stone-background.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border-color: burlywood;
+.btn{
+    background-color: lightgray;
+    border: 1px solid grey;
 }
 
 section{
@@ -48,6 +47,11 @@ section{
 }
 
 /*--------------------------------Menu */
+
+/* Changes dropdown menu text color to white */
+#drop-menu .dropdown-item{
+    color: ghostwhite;
+}
 
 #burger-menu-button{
     background-image: url('../images/black-scales.png');
@@ -66,7 +70,12 @@ nav li{
     list-style: none;
 }
 
+/* Centers inputs throughout the pages */
 input{
     text-align: center;
 }
 
+/* Makes it so the tutorial text is back to black from ghostwhite */
+.introjs-tooltiptext{
+    color: black;
+}
