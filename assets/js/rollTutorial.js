@@ -9,7 +9,7 @@ function rollTutorial() {
             position: 'bottom-middle-aligned'
         }, {
             element: document.getElementsByClassName('step-2')[0],
-            intro: "You can roll up to 50 <b>d20</b>s by typing the amount in the box to the left. The amount can be 0 (for no dice) up to 30.",
+            intro: "You can roll <b>d20</b>s by typing the total of dice in the box to the left. The amount can be 0 (for no dice) up to 30.",
             position: 'bottom-middle-aligned'
         }, {
             element: document.getElementsByClassName('step-3')[0],
@@ -19,7 +19,7 @@ function rollTutorial() {
             element: document.getElementsByClassName('step-4')[0],
             intro: "And remove any extra dice with the remove button."
         }, {
-            intro: "There are many tipe of dice, from top to bottom they are d20, d12, d10, d8, d6 and d4. Feel free to mix and match any combination of these."
+            intro: "There are many types of dice, from top to bottom they are d20, d12, d10, d8, d6 and d4. Feel free to mix and match any combination of these."
         }, {
             element: document.getElementsByClassName('step-5')[0],
             intro: "This is a general modifier, use this whenever you get a brief bonus (or penalty) to one of your rolls, it will be added to the end result. It accepts numbers between -50 and 50."
@@ -28,7 +28,7 @@ function rollTutorial() {
             intro: "By ticking the <b>Proficiency</b> box it will add the level proficiency modifier."
         }, {
             element: document.getElementsByClassName('step-7')[0],
-            intro: "This is the <b>Advantage/Disadvantage</b> option, it affects attack rolls. Advantage rolls two d20s and selects the highest. Disadvantage rolls two d20s and selects the lowest."
+            intro: "This is the <b>Advantage/Disadvantage</b> option, it affects attack rolls.<br><br> Advantage rolls two d20s and selects the highest.<br><br> Disadvantage rolls two d20s and selects the lowest."
         }, {
             element: document.getElementsByClassName('step-8')[0],
             intro: "The <b>Ability Score Modifier</b> of your choice is added to attack and free rolls."
