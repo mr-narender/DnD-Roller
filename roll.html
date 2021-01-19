@@ -41,6 +41,8 @@
                 </div>
             </nav>
         </header>
+        <!-- Tutorial -->
+        <button onclick="rollTutorial();">Help me</button>
         <!-- Dice Form -->
         <section class="container">
             <form>
@@ -49,21 +51,21 @@
                     <div class="col-12 col-lg-7 g-2 border-section">
                         <div class="row">
                             <!-- d20 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d20" class="form-control">
+                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center step-2">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d20" class="form-control number-of-dice">
                             </div>
-                            <div class="col-4 responsive-dice">
+                            <div class="col-4 responsive-dice step-1">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
-                            <div class="col-2 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center step-3">
                                 <button onclick="return addDice('d20');">+</button>
                             </div>
-                            <div class="col-2 d-flex align-items-center">
+                            <div class="col-2 d-flex align-items-center step-4">
                                 <button onclick="return substractDice('d20');">-</button>
                             </div>
                             <!-- d12 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d12" class="form-control">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d12" class="form-control number-of-dice">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d12.png" alt="12-sided die">
@@ -76,7 +78,7 @@
                             </div>
                             <!-- d10 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d10" class="form-control">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d10" class="form-control number-of-dice">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d10.png" alt="10-sided die">
@@ -89,7 +91,7 @@
                             </div>
                             <!-- d8 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d8" class="form-control">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d8" class="form-control number-of-dice">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d8.png" alt="8-sided die">
@@ -102,7 +104,7 @@
                             </div>
                             <!-- d6 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d6" class="form-control">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d6" class="form-control number-of-dice">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d6.png" alt="6-sided die">
@@ -115,7 +117,7 @@
                             </div>
                             <!-- d4 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input type="text" value="0" name="d4" class="form-control">
+                                <input onblur="validateForm(this);" type="text" value="0" name="d4" class="form-control number-of-dice">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d4.png" alt="4-sided die">
@@ -138,7 +140,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" name="modifier" value="0" class="form-control col-6 offset-3">
+                                <input onblur="validateForm(this);" type="text" name="modifier" value="0" class="form-control col-6 offset-3 modifier step-5">
                             </div>
                         </div>
                         <!-- Proficiency -->
@@ -149,14 +151,14 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="checkbox" name="proficiency" checked>
+                                <input type="checkbox" name="proficiency" class="proficiency step-6" checked>
                             </div>
                         </div>
                         <!-- Advantage -->
                         <div class="row">
                             <div class="col-12 form-group">
                                 <label for="advantage-menu">Advantage / Disadvantage</label>
-                                <select class="form-control" id="advantage-menu">
+                                <select class="form-control step-7" id="advantage-menu">
                                     <option>None</option>
                                     <option>Advantage</option>
                                     <option>Disadvantage</option>
@@ -167,7 +169,7 @@
                         <div class="row">
                             <div class="col-12 form-group">
                                 <label for="ability-menu">Select Ability to use</label>
-                                <select class="form-control" id="ability-menu">
+                                <select class="form-control step-8" id="ability-menu">
                                     <option>None</option>
                                     <option>STR</option>
                                     <option>DEX</option>
@@ -184,7 +186,7 @@
         </section>
         <!-- Skills -->
         <section class="container border-section">
-            <button type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
+            <button class="step-9" type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
                 Skills
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
             </button>
@@ -250,20 +252,20 @@
             <div class="row">
                 <!-- ATK Roll Button -->
                 <div class="col-4">
-                    <button onclick="return atkRoll();">ATK Roll</button>
+                    <button class="step-10" onclick="return atkRoll();">ATK Roll</button>
                 </div>
                  <!-- Clear Button -->
                 <div class="col-4">
-                    <button onclick="return clearDice();">Clear Dice</button>
+                    <button class="step-11" onclick="return clearDice();">Clear Dice</button>
                 </div>
                 <!-- Free Roll Button -->
                 <div class="col-4">
-                    <button onclick="return freeRoll();">Free Roll</button>
+                    <button class="step-12" onclick="return freeRoll();">Free Roll</button>
                 </div>
             </div>
         </section>   
         <!-- Results -->
-        <section class="container border-section" id="result-section">
+        <section class="container border-section step-13" id="result-section">
             <h2 class="col-12">Results</h2>
             <p id="dice-sum"></p>
             <p>=</p>
@@ -278,6 +280,8 @@
         <script src="assets/js/addModifiers.js"></script>
         <script src="assets/js/clearDice.js"></script>
         <script src="assets/js/skillRoll.js"></script>
+        <script src="assets/js/validateForm.js"></script>
+        <script src="assets/js/rollTutorial.js"></script>
         <!-- External libraries -->
         <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

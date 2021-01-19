@@ -23,6 +23,7 @@ function calculateSkillMod(input, ability) {
         localStorage.setItem(`${skill[0]}`, `${sum}`);      
     // Error message in case the input is invalid.
     } else {
+        mod.value = 0;
         console.log("Invalid modifier input.")
     }
     return false;

@@ -41,7 +41,7 @@
             </div>
         </nav>
     </header>
-    <!-- Stats -->
+    <!-- Tutorial -->
     <button onclick="characterSheetTutorial();">Help me</button>
     <!-- Stats -->
     <section class="container">
@@ -51,7 +51,7 @@
                 <div class="col-12 col-lg-6 border-section">
                     <div class="row">
                         <h2 class="col-12">Ability Scores</h2>
-                        <div class="offset-2 col-8" id="step-1">
+                        <div class="offset-2 col-8 step-1">
                             <label class="col-12" for="str">STR</label>
                             <input onblur="calculateAbilityMod(this);" name="str" type="text">
                         </div>
@@ -81,15 +81,15 @@
                 <div class="col-12 col-lg-6 border-section">
                     <div class="row">
                         <h2 class="col-12">Character</h2>
-                        <div class="offset-2 col-8" id="step-2">
+                        <div class="offset-2 col-8 step-2">
                             <label class="col-12" for="level">Level</label>
                             <input onblur="calculateProf(this);" name="level" type="text">
                         </div>
-                        <div class="offset-2 col-8" id="step-3">
+                        <div class="offset-2 col-8 step-3">
                             <label class="col-12" for="attack-mod">Attack Mod</label>
                             <input onblur="calculateAtkDmgMod(this);" name="attack-mod" type="text">
                         </div>
-                        <div class="offset-2 col-8" id="step-4">
+                        <div class="offset-2 col-8 step-4">
                             <label class="col-12" for="damage-mod">Damage Mod</label>
                             <input onblur="calculateAtkDmgMod(this);" name="damage-mod" type="text">
                         </div>
@@ -104,10 +104,10 @@
             <div class="row">
                 <h2 class="col-12">Skills</h2>
                 <div class="col-6 col-lg-4">
-                    <div class="row justify-content-center" id="step-5">
+                    <div class="row justify-content-center step-5">
                         <label class="col-12" title="Acrobatics" for="acrobatics">Acrobatics</label>
-                        <input id="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="acrobatics-prof">
-                        <input id="step-7" onblur="return calculateSkillMod(this, 'dex')" class="offset-1 form-control" value="0"
+                        <input class="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="acrobatics-prof">
+                        <input class="offset-1 form-control step-7" onblur="return calculateSkillMod(this, 'dex')" value="0"
                             type="text" name="acrobatics-mod">
                     </div>
                 </div>

@@ -12,6 +12,7 @@ function calculateAbilityMod(ability) {
             $(`label[for = "${ability.name}"]`).html(`${ability.name.toUpperCase()} (${(mod)})`);
         }
     } else {
+        ability.value = 1;
         console.log("Invalid Ability Score");
     }
     return false;

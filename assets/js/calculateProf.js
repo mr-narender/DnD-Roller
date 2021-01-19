@@ -6,6 +6,7 @@ function calculateProf(level) {
         $(`label[for = "${level.name}"]`).html(`Level (+${(prof)})`);
         localStorage.setItem('prof', `${prof}`);
     } else {
+        level.value = 1;
         console.log("Invalid Level");
     }
     return false;
