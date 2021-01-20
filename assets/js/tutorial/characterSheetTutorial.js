@@ -25,7 +25,7 @@ function characterSheetTutorial() {
             element: document.getElementsByClassName('step-7')[0],
             intro: "The right one allows you to input any penalty or bonus to each skill, this number can be anywhere between -50 and 50."
         }, {
-            intro: 'This is it, adventurer. Once your character is set up you are ready to explore the brand new world laid around you. Best of luck, and may your rolls be plenty.<br> <img style="width: 120px; height: 100px;" src="/assets/images/dm.png" alt="DM">'
+            intro: 'This is it, adventurer. Once your character is set up you are ready to explore the brand new world laid around you. Best of luck, and may your rolls be plenty.<br> <img style="width: 120px; height: 100px;" src="assets/images/dm.png" alt="DM">'
         }]
     });
     tutorial.start();

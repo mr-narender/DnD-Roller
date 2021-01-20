@@ -48,7 +48,7 @@ function rollTutorial() {
             element: document.getElementsByClassName('step-13')[0],
             intro: "The result section shows each dice rolled and any modifiers selected, and it shows the sum below."
         },{
-            intro: 'This journey is only the start of the real one, keep your allies close and your dice closer, adventurer.<br> <img style="width: 120px; height: 100px;" src="/assets/images/dm.png" alt="DM">'
+            intro: 'This journey is only the start of the real one, keep your allies close and your dice closer, adventurer.<br> <img style="width: 120px; height: 100px;" src="assets/images/dm.png" alt="DM">'
         }]
     });
     tutorial.start();

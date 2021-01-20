@@ -2,3 +2,8 @@
 input{
     text-align: start;
 }
+
+/* Colors the text in the acknowledge message */
+#acknowledge-modal{
+    color: black;
+}
