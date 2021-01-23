@@ -82,6 +82,11 @@ function rollDice(number, sides) {
     return result;
 }
 
+// Shows the result section if hidden.
+function showResults(){
+    $('#result-section').removeClass('d-none');
+}
+
 // Rolls skills.
 function skillRoll(skill) {
     // Clears the dice-sum and result fields.
@@ -106,6 +111,7 @@ function skillRoll(skill) {
     // Clears the last "+" in input.
     let final = $("#dice-sum").html().slice(0, -3);
     $("#dice-sum").html(final);  
+    showResults();
     return false;
 }
 
@@ -144,7 +150,8 @@ function atkRoll() {
     addModifiers(parseInt($(`input[name = "modifier"]`).val()));
     // Clears the last "+" in input.
     let final = $("#dice-sum").html().slice(0, -3);
-    $("#dice-sum").html(final);    
+    $("#dice-sum").html(final);
+    showResults();    
     return false;
 }
 
@@ -175,6 +182,7 @@ function freeRoll() {
     clearDice();
     // Clears the last "+" in input.
     let final = $("#dice-sum").html().slice(0, -3);
-    $("#dice-sum").html(final);  
+    $("#dice-sum").html(final);
+    showResults();  
     return false;
 }

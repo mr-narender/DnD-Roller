@@ -53,11 +53,27 @@ section{
     color: ghostwhite;
 }
 
+/* Sets font for nav menu */
+nav{
+    font-family: 'dalelands_uncialbold';
+}
+
+/* Styles the nav buttons */
+#button-menu a{
+    background-color: transparent;
+    border: 4px outset red;
+    color: ghostwhite;
+}
+
+#button-menu a:hover{
+    background-color: ghostwhite;
+    color: red;
+}
+
 #burger-menu-button{
     background-image: url('../images/black-scales.png');
     background-repeat: repeat;
     color: red;
-    font-family: 'dalelands_uncialbold';
 }
 
 /* Centers the nav menu */
@@ -75,7 +91,26 @@ input{
     text-align: center;
 }
 
+
 /* Makes it so the tutorial text is back to black from ghostwhite */
 .introjs-tooltiptext{
     color: black;
+}
+
+/* Styles the floating action button */
+.floating-action-button{
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border: none;
+    border-radius: 100%;
+    background-color: ghostwhite;
+    cursor: pointer;
+}
+
+.floating-action-button:hover{
+    background-color: red;
 }

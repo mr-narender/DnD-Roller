@@ -1,4 +1,6 @@
 /*--------------------------------Skills */
+
+/* Increases the checkbox's size */
 #skills input{
     padding: 0px;
     width:30px;
@@ -6,6 +8,8 @@
     position: relative;
 }
 
+/* Removes the extra separator and leaves enough margin so the help button doesn't cover any content */
 #skills{
     border-bottom: none;
+    padding-bottom: 90px;
 }

@@ -1,10 +1,13 @@
-#result-section{
-    border-bottom: none;  
+/* Removes the extra separator and leaves enough margin so the help button doesn't cover any content */
+#skills-section{
+    border-bottom: none;
+    padding-bottom: 90px;  
 }
 
 
 /*--------------------------------Dice */
 
+/* Makes dice responsive */
 .responsive-dice img{
     max-width: 100px;
     max-height: 100px;
@@ -16,7 +19,10 @@
     margin-right: auto;
     display: flex;
 }
+
 /*--------------------------------Skills */
+
+/* Colors good rolls green and bad rolls red in result section */
 .crit-hit{
     color: green;
 }
@@ -25,12 +31,14 @@
     color: red;
 }
 
+/* Styles skills buttons */
 #skills-collapse button{
     width: 120px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* Increases the checkbox's size */
 .proficiency{
     padding: 0px;
     width:30px;
