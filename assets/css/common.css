@@ -53,6 +53,12 @@ section{
     color: ghostwhite;
 }
 
+/* Mouseover effect for burger menu buttons */
+#drop-menu .dropdown-item:hover{
+    color: red;
+    background-color: ghostwhite;
+}
+
 /* Sets font for nav menu */
 nav{
     font-family: 'dalelands_uncialbold';

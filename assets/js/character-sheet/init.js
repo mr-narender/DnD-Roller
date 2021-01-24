@@ -1,3 +1,16 @@
+$(document).ready($(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+}))
+
+// Briefly shows a tick to the user whenever a value is stored successfully
+function acknowledgeTick(input) {
+    input.tooltip('show');
+    setTimeout(function() {
+        input.tooltip('hide');
+    }, 1000);
+    return false;
+}
+
 // Calculates the Ability Scores Modifiers
 function calculateAbilityMod(ability) {
     if (1 <= ability.value && ability.value <= 30) {
@@ -12,6 +25,7 @@ function calculateAbilityMod(ability) {
         } else {
             $(`label[for = "${ability.name}"]`).html(`${ability.name.toUpperCase()} (${(mod)})`);
         }
+        acknowledgeTick($(`input[name = "${ability.name}"]`));
     } else {
         ability.value = 1;
         console.log("Invalid Ability Score");
@@ -23,6 +37,7 @@ function calculateAbilityMod(ability) {
 function calculateAtkDmgMod(mod) {
     if (-50 <= mod.value && mod.value <= 50) {
         localStorage.setItem(`${mod.name}`, `${mod.value}`);
+        acknowledgeTick($(`input[name = "${mod.name}"]`));
     } else {
         mod.value = 0;
         console.log("Invalid Modifier");
@@ -38,6 +53,7 @@ function calculateProf(level) {
         $(`input[name = "${level.name}"]`).val(Math.floor(level.value)); 
         $(`label[for = "${level.name}"]`).html(`Level (+${(prof)})`);
         localStorage.setItem('prof', `${prof}`);
+        acknowledgeTick($(`input[name = "${level.name}"]`));
     } else {
         level.value = 1;
         console.log("Invalid Level");
@@ -68,7 +84,8 @@ function calculateSkillMod(input, ability) {
             $(`label[for = "${skill[0]}"]`).html(`${$(`label[for = "${skill[0]}"]`).attr("title")} (+${(sum)})`); 
         }
         // Stores the value of the modifier in localStorage
-        localStorage.setItem(`${skill[0]}`, `${sum}`);      
+        localStorage.setItem(`${skill[0]}`, `${sum}`);     
+        acknowledgeTick($(`input[name = "${$(input).attr("name")}"]`)); 
     // Error message in case the input is invalid.
     } else {
         mod.value = 0;

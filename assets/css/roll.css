@@ -4,6 +4,10 @@
     padding-bottom: 90px;  
 }
 
+button:hover{
+    background-color: ghostwhite;
+    border-color: ghostwhite;
+}
 
 /*--------------------------------Dice */
 
