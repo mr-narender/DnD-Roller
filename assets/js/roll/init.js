@@ -112,6 +112,7 @@ function skillRoll(skill) {
     let final = $("#dice-sum").html().slice(0, -3);
     $("#dice-sum").html(final);  
     showResults();
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     return false;
 }
 
