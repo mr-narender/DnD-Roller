@@ -1,11 +1,16 @@
 // Initialize stored variables if any.
 initAbilityModifiers();
 initAbilityScores();
-initLevelModifier();
+initProficiencyModifier();
 initCharacterModifiers();
 initSkillLabels();
 initSkillInputs();
 initSkillCheckboxes();
+
+// Initialize tooltips.
+$(document).ready($(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+}))
 
 // Initialize Ability Modifiers
 function initAbilityModifiers() {
@@ -27,7 +32,7 @@ function initAbilityScores() {
     initInput($('[name="cha"]'), (parseInt(localStorage.getItem('cha-score'))));
 }
 
-function initLevelModifier() {
+function initProficiencyModifier() {
     initLabel($('[for="level"]'), (parseInt(localStorage.getItem('prof'))));
 }
 
@@ -37,8 +42,6 @@ function initCharacterModifiers() {
     initInput($('[name="attack-mod"]'), (parseInt(localStorage.getItem('attack-mod'))));
     initInput($('[name="damage-mod"]'), (parseInt(localStorage.getItem('damage-mod'))));
 }
-
-
 
 // Initialize Skills
 function initSkillLabels() {
@@ -104,14 +107,18 @@ function initSkillCheckboxes() {
     initCheckbox($('[name="survival-prof"]'), localStorage.getItem('survival-prof'));
 }
 
+// Initializes a single label.
 function initLabel(label, number) {
-    if (number < 1) {
-        $(label).append(` (${number})`);
-    } else {
-        $(label).append(` (+${number})`);
-    }
-} 
-
+    if (number){
+        if (number < 1) {
+            $(label).append(` (${number})`);
+        } else {
+            $(label).append(` (+${number})`);
+        }
+    } 
+}
+    
+// Initializes a single checkbox.
 function initCheckbox(checkbox, status) {
     if (status === 'checked') {
         $(checkbox).prop('checked', true);
@@ -119,6 +126,7 @@ function initCheckbox(checkbox, status) {
     return false
 }
 
+// Initializes a single text input.
 function initInput(input, number) {
     if (number) {
         $(input).val(number);
@@ -126,13 +134,7 @@ function initInput(input, number) {
     return false
 }
 
-
-// Initialize tooltips.
-$(document).ready($(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-}))
-
-// Briefly shows a tick to the user whenever a value is stored successfully
+// Briefly shows a tick to the user whenever a value is stored successfully.
 function acknowledgeTick(input) {
     input.tooltip('show');
     setTimeout(function() {
@@ -141,12 +143,27 @@ function acknowledgeTick(input) {
     return false;
 }
 
-// Calculates the Ability Scores Modifiers
+// Ensures only integers are input.
+function inputToInteger(input) {
+    $(input).val(Math.floor(input.val())); 
+}
+
+function abilityScoreToMod(score) {
+    let mod = Math.floor((score - 10)/2);
+    return mod;
+}
+
+function levelToProf(level) {
+    let prof = Math.ceil(1 + 1/4*(level));
+    return prof;
+}
+
+// Calculates the Ability Scores Modifiers.
 function calculateAbilityMod(ability) {
     if (1 <= ability.value && ability.value <= 30) {
-        let mod = Math.floor((ability.value - 10)/2);
+        let mod = abilityScoreToMod(ability.value);
         // Replaces the text in the input field with its floor value, since ability scores should only be integers.
-        $(`input[name = "${ability.name}"]`).val(Math.floor(ability.value)); 
+        inputToInteger($(`input[name = "${ability.name}"]`));
         // Adds the modifier and score to localStorage.
         localStorage.setItem(`${ability.name}`, `${mod}`);
         localStorage.setItem(`${ability.name}-score`, `${ability.value}`);
@@ -164,8 +181,11 @@ function calculateAbilityMod(ability) {
     return false;
 }
 
-// Calculates the Attack and Damage modifiers
+// Calculates the Attack and Damage modifiers.
 function calculateAtkDmgMod(mod) {
+    // Replaces the text in the input field with its floor value, since modifiers should only be integers.
+    inputToInteger(($(`input[name = "${mod.name}"]`)));
+    // Validates the input in modifier and stores it if valid.
     if (-50 <= mod.value && mod.value <= 50) {
         localStorage.setItem(`${mod.name}`, `${mod.value}`);
         acknowledgeTick($(`input[name = "${mod.name}"]`));
@@ -176,12 +196,12 @@ function calculateAtkDmgMod(mod) {
     return false;
 }
 
-// Calculates the proficiency using the value of Level
+// Calculates the proficiency using the value of Level.
 function calculateProf(level) {
     if (1 <= level.value && level.value <= 20) {
-        let prof = Math.ceil(1 + 1/4*(level.value));
-        // Replaces the text in the input field with its floor value, since ability scores should only be integers.
-        $(`input[name = "${level.name}"]`).val(Math.floor(level.value)); 
+        // Replaces the text in the input field with its floor value, since modifiers should only be integers.
+        inputToInteger($(`input[name = "${level.name}"]`));
+        prof = levelToProf(level.value);
         $(`label[for = "${level.name}"]`).html(`Level (+${(prof)})`);
         localStorage.setItem('prof', `${prof}`);
         localStorage.setItem('level', `${level.value}`);
@@ -200,6 +220,8 @@ function calculateSkillMod(input, ability) {
     let sum;
     // Adds the required ability modifier.
     sum = parseInt(localStorage.getItem(ability));
+    // Replaces the text in the input field with its floor value, since modifiers should only be integers.
+    inputToInteger($(`input[name = "${skill[0]}-mod"]`));
     // Validates the input in modifier and then adds both the modifier and the proficiency if 
     // proficiency checkbox is "checked", or only the modifier if unchecked.
     let mod = parseInt($(`input[name = "${skill[0]}-mod"]`).val());
