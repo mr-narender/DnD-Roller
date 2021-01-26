@@ -8,9 +8,9 @@
         <meta name="description"
             content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
         <!-- Libraries -->
+        <link rel="preload" href="assets/css/common.css" as="style">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
         <link rel="stylesheet" href="assets/css/common.css">
         <link rel="stylesheet" href="assets/css/roll.css">
         <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
@@ -49,7 +49,7 @@
             </nav>
         </header>
         <!-- Tutorial -->
-        <button class="floating-action-button" onclick="rollTutorial();"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+        <button class="floating-action-button" onclick="rollTutorial();" aria-label="Help Tutorial"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
         <!-- Results -->
         <section class="container border-section d-none step-13" id="result-section">
             <h2 class="col-12">Results</h2>
@@ -83,81 +83,81 @@
                         <div class="row g-2">
                             <!-- d20 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center step-2">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d20" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d20" class="form-control number-of-dice" aria-label="Amount of d20">
                             </div>
                             <div class="col-4 responsive-dice step-1">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center step-3">
-                                <button class="btn" onclick="return addDice('d20');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d20');" aria-label="Add d20"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center step-4">
-                                <button class="btn" onclick="return substractDice('d20');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d20');" aria-label="Subtract d20"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d12 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d12" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d12" class="form-control number-of-dice" aria-label="Amount of d12">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d12.png" alt="12-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return addDice('d12');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d12');" aria-label="Add d12"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return substractDice('d12');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d12');" aria-label="Subtract d12"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d10 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d10" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d10" class="form-control number-of-dice" aria-label="Amount of d10">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d10.png" alt="10-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return addDice('d10');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d10');" aria-label="Add d10"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return substractDice('d10');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d10');" aria-label="Subtract d10"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d8 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d8" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d8" class="form-control number-of-dice" aria-label="Amount of d8">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d8.png" alt="8-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return addDice('d8');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d8');" aria-label="Add d8"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return substractDice('d8');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d8');" aria-label="Subtract d8"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d6 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d6" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d6" class="form-control number-of-dice" aria-label="Amount of d6">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d6.png" alt="6-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return addDice('d6');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d6');" aria-label="Add d6"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return substractDice('d6');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d6');" aria-label="Subtract d6"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d4 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
-                                <input onblur="validateDice(this);" type="text" value="0" name="d4" class="form-control number-of-dice">
+                                <input onblur="validateDice(this);" type="text" value="0" name="d4" class="form-control number-of-dice" aria-label="Amount of d4">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d4.png" alt="4-sided die">
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return addDice('d4');"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return addDice('d4');" aria-label="Add d4"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                             <div class="p-1 col-2 d-flex align-items-center">
-                                <button class="btn" onclick="return substractDice('d4');"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button class="btn" onclick="return subtractDice('d4');" aria-label="Subtract d4"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input onblur="validateModifier(this);" type="text" name="modifier" value="0" class="form-control col-6 offset-3 modifier step-5">
+                                <input id="modifier" onblur="validateModifier(this);" type="text" name="modifier" value="0" class="form-control col-6 offset-3 modifier step-5">
                             </div>
                         </div>
                         <!-- Proficiency -->
@@ -208,7 +208,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="checkbox" name="proficiency" class="proficiency step-6">
+                                <input id="proficiency" type="checkbox" name="proficiency" class="proficiency step-6">
                             </div>
                         </div>
                     </div>

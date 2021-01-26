@@ -20,6 +20,7 @@
 
 /*--------------------------------Whole Page */
 
+/* Background pattern from Toptal Subtle Patterns */
 body{
     background-image: url('../images/black-scales.png');
     background-repeat: repeat;

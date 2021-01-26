@@ -9,7 +9,7 @@ function addDice(die) {
 }
 
 // Subtracts 1 die to the respective row of dice clicked, while preventing going to negative values.
-function substractDice (die) {
+function subtractDice (die) {
     if (0 < +$(`input[name = "${die}"]`).val()) {
         $(`input[name = "${die}"]`).val(+$(`input[name = "${die}"]`).val() - 1); 
     } else {

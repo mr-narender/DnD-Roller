@@ -8,9 +8,9 @@
     <meta name="description"
         content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
     <!-- Libraries -->
+    <link rel="preload" href="assets/css/common.css" as="style">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/character-sheet.css">
     <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
@@ -49,7 +49,7 @@
             </nav>
         </header>
     <!-- Tutorial -->
-    <button class="floating-action-button" onclick="rollTutorial();"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+    <button class="floating-action-button" onclick="rollTutorial();" aria-label="Help Tutorial"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
     <!-- Stats -->
     <section class="container">
         <form>
@@ -60,37 +60,37 @@
                         <h2 class="col-12">Ability Scores</h2>
                         <div class="offset-2 col-8 step-1">
                             <label class="col-12" for="str">STR</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="str" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="str" type="text">
                         </div>
                         <div class="offset-2 col-8">
                             <label class="col-12" for="dex">DEX</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="dex" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="calculateAbilityMod(this);" name="dex" type="text">
                         </div>
                         <div class="offset-2 col-8">
                             <label class="col-12" for="con">CON</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="con" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="con" type="text">
                         </div>
                         <div class="offset-2 col-8">
                             <label class="col-12" for="int">INT</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="int" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="int" type="text">
                         </div>
                         <div class="offset-2 col-8">
                             <label class="col-12" for="wis">WIS</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="wis" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="wis" type="text">
                         </div>
                         <div class="offset-2 col-8">
                             <label class="col-12" for="cha">CHA</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="cha" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="cha" type="text">
                         </div>
@@ -102,19 +102,19 @@
                         <h2 class="col-12">Character</h2>
                         <div class="offset-2 col-8 step-2">
                             <label class="col-12" for="level">Level</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="level" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateProf(this);" name="level" type="text">
                         </div>
                         <div class="offset-2 col-8 step-3">
                             <label class="col-12" for="attack-mod">Attack Mod</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="attack-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAtkDmgMod(this);" name="attack-mod" type="text">
                         </div>
                         <div class="offset-2 col-8 step-4">
                             <label class="col-12" for="damage-mod">Damage Mod</label>
-                            <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input id="damage-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAtkDmgMod(this);" name="damage-mod" type="text">
                         </div>
@@ -133,11 +133,11 @@
                         <label class="col-12" title="Acrobatics" for="acrobatics">Acrobatics</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
-                            class="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="acrobatics-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            class="step-6" onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="acrobatics-prof" aria-label="Acrobatics proficiency">
+                        <input id="acrobatics" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             class="offset-1 form-control step-7" onblur="return calculateSkillMod(this, 'dex')" value="0"
-                            type="text" name="acrobatics-mod">
+                            type="text" name="acrobatics-mod" aria-label="Acrobatics modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -146,11 +146,11 @@
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" type="checkbox"
-                            name="animalhandling-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            name="animalhandling-prof" aria-label="Animal Handling proficiency">
+                        <input id="animalhandling" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" class="offset-1 form-control" value="0"
-                            type="text" name="animalhandling-mod">
+                            type="text" name="animalhandling-mod" aria-label="Animal Handling modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -158,11 +158,11 @@
                         <label class="col-12" title="Arcana" for="arcana">Arcana</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="arcana-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="arcana-prof" aria-label="Arcana proficiency">
+                        <input id="arcana" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'int')" class="offset-1 form-control" value="0"
-                            type="text" name="arcana-mod">
+                            type="text" name="arcana-mod" aria-label="Arcana modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -170,11 +170,11 @@
                         <label class="col-12" title="Athletics" for="athletics">Athletics</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'str')" type="checkbox" name="athletics-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'str')" type="checkbox" name="athletics-prof" aria-label="Athletics proficiency">
+                        <input id="athletics" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'str')" class="offset-1 form-control" value="0"
-                            type="text" name="athletics-mod">
+                            type="text" name="athletics-mod" aria-label="Athletics modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -182,11 +182,11 @@
                         <label class="col-12" title="Deception" for="deception">Deception</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="deception-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="deception-prof" aria-label="Deception proficiency">
+                        <input id="deception" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'cha')" class="offset-1 form-control" value="0"
-                            type="text" name="deception-mod">
+                            type="text" name="deception-mod" aria-label="Deception modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -194,11 +194,11 @@
                         <label class="col-12" title="History" for="history">History</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="history-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="history-prof" aria-label="History proficiency">
+                        <input id="history" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'int')" class="offset-1 form-control" value="0"
-                            type="text" name="history-mod">
+                            type="text" name="history-mod" aria-label="History modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -206,11 +206,11 @@
                         <label class="col-12" title="Insight" for="insight">Insight</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="insight-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="insight-prof" aria-label="Insight proficiency">
+                        <input id="insight" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" class="offset-1 form-control" value="0"
-                            type="text" name="insight-mod">
+                            type="text" name="insight-mod" aria-label="Insight modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -218,11 +218,11 @@
                         <label class="col-12" title="Intimidation" for="intimidation">Intimidation</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="intimidation-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="intimidation-prof" aria-label="Intimidation proficiency">
+                        <input id="intimidation" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'cha')" class="offset-1 form-control" value="0"
-                            type="text" name="intimidation-mod">
+                            type="text" name="intimidation-mod" aria-label="Intimidation modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -230,11 +230,11 @@
                         <label class="col-12" title="Investigation" for="investigation">Investigation</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="investigation-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="investigation-prof" aria-label="Investigation proficiency">
+                        <input id="investigation" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'int')" class="offset-1 form-control" value="0"
-                            type="text" name="investigation-mod">
+                            type="text" name="investigation-mod" aria-label="Investigation modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -242,11 +242,11 @@
                         <label class="col-12" title="Medicine" for="medicine">Medicine</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="medicine-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="medicine-prof" aria-label="Medicine proficiency">
+                        <input id="medicine" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" class="offset-1 form-control" value="0"
-                            type="text" name="medicine-mod">
+                            type="text" name="medicine-mod" aria-label="Medicine modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -254,11 +254,11 @@
                         <label class="col-12" title="Nature" for="nature">Nature</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="nature-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="nature-prof" aria-label="Nature proficiency">
+                        <input id="nature" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'int')" class="offset-1 form-control" value="0"
-                            type="text" name="nature-mod">
+                            type="text" name="nature-mod" aria-label="Nature modifier"> 
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -266,11 +266,11 @@
                         <label class="col-12" title="Perception" for="perception">Perception</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="perception-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="perception-prof" aria-label="Perception proficiency">
+                        <input id="perception" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" class="offset-1 form-control" value="0"
-                            type="text" name="perception-mod">
+                            type="text" name="perception-mod" aria-label="Perception modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -278,11 +278,11 @@
                         <label class="col-12" title="Performance" for="performance">Performance</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="performance-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="performance-prof" aria-label="Performance proficiency">
+                        <input id="performance" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'cha')" class="offset-1 form-control" value="0"
-                            type="text" name="performance-mod">
+                            type="text" name="performance-mod" aria-label="Performance modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -290,11 +290,11 @@
                         <label class="col-12" title="Persuasion" for="persuasion">Persuasion</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="persuasion-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'cha')" type="checkbox" name="persuasion-prof" aria-label="Persuasion proficiency">
+                        <input id="persuasion" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'cha')" class="offset-1 form-control" value="0"
-                            type="text" name="persuasion-mod">
+                            type="text" name="persuasion-mod" aria-label="Persuasion modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -302,11 +302,11 @@
                         <label class="col-12" title="Religion" for="religion">Religion</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="religion-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'int')" type="checkbox" name="religion-prof" aria-label="Religion proficiency">
+                        <input id="religion" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'int')" class="offset-1 form-control" value="0"
-                            type="text" name="religion-mod">
+                            type="text" name="religion-mod" aria-label="Religion modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -314,11 +314,11 @@
                         <label class="col-12" title="Sleight of Hand" for="sleightofhand">Sleight of Hand</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="sleightofhand-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="sleightofhand-prof" aria-label="Sleight of Hand proficiency">
+                        <input id="sleightofhand" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'dex')" class="offset-1 form-control" value="0"
-                            type="text" name="sleightofhand-mod">
+                            type="text" name="sleightofhand-mod" aria-label="Sleight of Hand modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -326,11 +326,11 @@
                         <label class="col-12" title="Stealth" for="stealth">Stealth</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="stealth-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'dex')" type="checkbox" name="stealth-prof" aria-label="Stealth proficiency">
+                        <input id="stealth" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'dex')" class="offset-1 form-control" value="0"
-                            type="text" name="stealth-mod">
+                            type="text" name="stealth-mod" aria-label="Stealth modifier">
                     </div>
                 </div>
                 <div class="col-6 col-lg-4">
@@ -338,11 +338,11 @@
                         <label class="col-12" title="Survival" for="survival">Survival</label>
                         <input data-toggle="tooltip" data-placement="left" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
-                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="survival-prof">
-                        <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                            onblur="return calculateSkillMod(this, 'wis')" type="checkbox" name="survival-prof" aria-label="Survival proficiency">
+                        <input id="survival" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="return calculateSkillMod(this, 'wis')" class="offset-1 form-control" value="0"
-                            type="text" name="survival-mod">
+                            type="text" name="survival-mod" aria-label="Survival modifier">
                     </div>
                 </div>
             </div>
