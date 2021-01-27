@@ -1,4 +1,4 @@
-function rollTutorial() {
+function indexTutorial() {
     let tutorial = introJs();
     tutorial.setOptions({
         steps: [{

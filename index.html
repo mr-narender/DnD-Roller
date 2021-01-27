@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/common.css">
-        <link rel="stylesheet" href="assets/css/roll.css">
+        <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <title>DnD Roller</title>
@@ -23,7 +23,7 @@
             <nav class="navbar d-flex justify-content-center row">
                 <!-- Button Menu -->
                 <div id="button-menu" class="btn-group d-none d-lg-block" role="group" aria-label="Menu">
-                    <a href="roll.html" class="btn">Roller</a>
+                    <a href="index.html" class="btn">Roller</a>
                     <a href="character-sheet.html" class="btn">Character Sheet</a>
                     <a href="contact.html" class="btn">Send Feedback</a>
                 </div>
@@ -36,7 +36,7 @@
                 <div id="drop-menu" role="menu" class="collapse col-12" aria-labelledby="drop-menu">
                     <ul>
                         <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
-                            <a class="dropdown-item" href="roll.html">Roller</a>
+                            <a class="dropdown-item" href="index.html">Roller</a>
                         </li>
                         <li data-toggle="collapse" data-target="#drop-menu" class="nav-item">
                             <a class="dropdown-item" href="character-sheet.html">Character Sheet</a>
@@ -49,7 +49,7 @@
             </nav>
         </header>
         <!-- Tutorial -->
-        <button class="floating-action-button" onclick="rollTutorial();" aria-label="Help Tutorial"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+        <button class="floating-action-button" onclick="indexTutorial();" aria-label="Help Tutorial"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
         <!-- Results -->
         <section class="container border-section d-none step-13" id="result-section">
             <h2 class="col-12">Results</h2>
@@ -279,8 +279,8 @@
             </div>
         </section> 
         <!-- Local libraries -->
-        <script src="assets/js/roll/init.js"></script>
-        <script src="assets/js/tutorial/rollTutorial.js"></script>
+        <script src="assets/js/index/init.js"></script>
+        <script src="assets/js/tutorial/indexTutorial.js"></script>
         <!-- External libraries -->
         <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
