@@ -88,11 +88,11 @@
                             <div class="col-4 responsive-dice step-1">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center step-3">
-                                <button class="btn" onclick="return addDice('d20');" aria-label="Add d20"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <div class="p-1 col-2 d-flex align-items-center">
+                                <button class="btn step-3" onclick="return addDice('d20');" aria-label="Add d20"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center step-4">
-                                <button class="btn" onclick="return subtractDice('d20');" aria-label="Subtract d20"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            <div class="p-1 col-2 d-flex align-items-center">
+                                <button class="btn step-4" onclick="return subtractDice('d20');" aria-label="Subtract d20"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d12 -->
                             <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
@@ -167,7 +167,7 @@
                         <div class="row">
                             <div class="col-12 form-group">
                                 <label for="ability-menu">Select Ability to use</label>
-                                <select class="form-control step-8" id="ability-menu">
+                                <select class="form-control step-5" id="ability-menu">
                                     <option>None</option>
                                     <option>STR</option>
                                     <option>DEX</option>
@@ -182,7 +182,7 @@
                         <div class="row">
                             <div class="col-12 form-group">
                                 <label for="advantage-menu">Advantage / Disadvantage</label>
-                                <select class="form-control step-7" id="advantage-menu">
+                                <select class="form-control step-6" id="advantage-menu">
                                     <option>None</option>
                                     <option>Advantage</option>
                                     <option>Disadvantage</option>
@@ -197,7 +197,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input id="modifier" onblur="validateModifier(this);" type="text" name="modifier" value="0" class="form-control col-6 offset-3 modifier step-5">
+                                <input id="modifier" onblur="validateModifier(this);" type="text" name="modifier" value="0" class="form-control col-6 offset-3 modifier step-7">
                             </div>
                         </div>
                         <!-- Proficiency -->
@@ -208,7 +208,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input id="proficiency" type="checkbox" name="proficiency" class="proficiency step-6">
+                                <input id="proficiency" type="checkbox" name="proficiency" class="proficiency step-8">
                             </div>
                         </div>
                     </div>

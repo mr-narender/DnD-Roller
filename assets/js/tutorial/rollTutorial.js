@@ -22,20 +22,20 @@ function rollTutorial() {
             intro: "There are many types of dice, from top to bottom they are d20, d12, d10, d8, d6 and d4. Feel free to mix and match any combination of these."
         }, {
             element: document.getElementsByClassName('step-5')[0],
-            intro: "This is a general modifier, use this whenever you get a brief bonus (or penalty) to one of your rolls, it will be added to the end result. It accepts numbers between -50 and 50."
-        }, {
-            element: document.getElementsByClassName('step-6')[0],
-            intro: "By ticking the <b>Proficiency</b> box it will add the level proficiency modifier."
-        }, {
-            element: document.getElementsByClassName('step-7')[0],
-            intro: "This is the <b>Advantage/Disadvantage</b> option, it affects attack rolls.<br><br> Advantage rolls two d20s and selects the highest.<br><br> Disadvantage rolls two d20s and selects the lowest."
-        }, {
-            element: document.getElementsByClassName('step-8')[0],
             intro: "The <b>Ability Score Modifier</b> of your choice is added to attack and free rolls."
         }, {
+            element: document.getElementsByClassName('step-6')[0],
+            intro: "This is the <b>Advantage/Disadvantage</b> option, it affects attack rolls.<br><br> Advantage rolls two d20s and selects the highest.<br><br> Disadvantage rolls two d20s and selects the lowest."
+        }, {
+            element: document.getElementsByClassName('step-7')[0],
+            intro: "This is a general modifier, use this whenever you get a brief bonus (or penalty) to one of your rolls, it will be added to the end result. It accepts numbers between -50 and 50."
+        }, {
+            element: document.getElementsByClassName('step-8')[0],
+            intro: "By ticking the <b>Proficiency</b> box it will add the level proficiency modifier."
+        }, {
             element: document.getElementsByClassName('step-9')[0],
-            intro: "By clicking the <b>Skills</b> button you can select any of the skills and automatically roll with it's respective modifiers."
-        },  {
+            intro: "Clicking the <b>Skills</b> button you can select any of the skills and automatically roll with it's respective modifiers."
+        }, {
             element: document.getElementsByClassName('step-10')[0],
             intro: "The <b>ATK Roll</b> button rolls a single d20 with any of the modifiers and options selected."
         }, {
@@ -44,10 +44,9 @@ function rollTutorial() {
         }, {
             element: document.getElementsByClassName('step-12')[0],
             intro: "The <b>Free Roll</b> allows you to roll the dice previously selected, plus any of the options selected except for Advantage / Disadvantage."
-        },  {
-            element: document.getElementsByClassName('step-13')[0],
+        }, {
             intro: "The result section shows each dice rolled and any modifiers selected, and it shows the sum below."
-        },{
+        }, {
             intro: 'This journey is only the start of the real one, keep your allies close and your dice closer, adventurer.<br> <img style="width: 120px; height: 100px;" src="assets/images/dm.png" alt="DM">'
         }]
     });
