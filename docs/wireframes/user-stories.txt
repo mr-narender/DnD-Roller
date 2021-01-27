@@ -3,5 +3,4 @@ As a player I need to:
 - Be able to roll dice for attack, damage and skill rolls.
 - Be able to easily tell if my dice rolls are either the best or the worst.
 - Be able to store my character's stats so I can easily return to it between sessions.
-- Be able to understand the interface if I don't have much experience with DnD.
 - Be able to send feedback back to the developer in case I need anything else readily available in my dice roller.

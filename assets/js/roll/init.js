@@ -174,7 +174,7 @@ function skillRoll(skill) {
     // Adds other modifiers.
     addOtherModifier();
     // Clears the last "+" in input.
-    clearLastOperator()
+    clearLastOperator();
     // Shows result section if hidden. 
     showResults();
     // Scrolls to top.

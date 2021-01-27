@@ -10,7 +10,7 @@ initSkillCheckboxes();
 // Initialize tooltips.
 $(document).ready($(function () {
     $('[data-toggle="tooltip"]').tooltip();
-}))
+}));
 
 // Initialize Ability Modifiers
 function initAbilityModifiers() {
@@ -123,7 +123,7 @@ function initCheckbox(checkbox, status) {
     if (status === 'checked') {
         $(checkbox).prop('checked', true);
     }
-    return false
+    return false;
 }
 
 // Initializes a single text input.
@@ -131,7 +131,7 @@ function initInput(input, number) {
     if (number) {
         $(input).val(number);
     }
-    return false
+    return false;
 }
 
 // Briefly shows a tick to the user whenever a value is stored successfully.

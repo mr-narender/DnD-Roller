@@ -1,6 +1,6 @@
 # DnD Roller
 
-![Am I responsive](/docs/Am-i-responsive.png)
+![Am I responsive](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/readme/am-i-responsive.png)
 
 ## User Experience (UX)
 
@@ -24,8 +24,6 @@
         -   **#lightgray** for most of the buttons. 
           
         All of these are contrasted with ***black scales*** in the background, most of the interface is designed around an elegant dark mode, while keeping some of the iconic red, the colorful dice often found in shops, and the black dragon scales to further depict the fantasy around the game.
-        
-        ![Black Scales](/assets/images/black-scales.png)
 
     -   #### Typography
         -   Two main fonts were chosen for this page: 
@@ -38,9 +36,9 @@
 
 *   ### Wireframes
 
-    -   Mobile Wireframe - [View](https://github.com/JuanBrachoDev/Milestone-One/blob/master/docs/Mobile.png)
+    -   Mobile Wireframe - [View](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/wireframes/mobile)
 
-    -   Desktop Wireframe - [View](https://github.com/JuanBrachoDev/Milestone-One/blob/master/docs/Desktop.png)
+    -   Desktop Wireframe - [View](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/wireframes/desktop)
 
 ## Features
 
@@ -105,7 +103,7 @@
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [Mobile](https://github.com/JuanBrachoDev/Milestone-One/blob/master/docs/Mobile.png) and [Desktop](https://github.com/JuanBrachoDev/Milestone-One/blob/master/docs/Desktop.png) wireframes during the design process.
+    - Balsamiq was used to create the [Mobile](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/wireframes/mobile) and [Desktop](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/wireframes/desktop) wireframes during the design process.
 1. [Am I responsive:](http://ami.responsivedesign.is/)
     - Used to efficiently test different responsive layouts and provide the header image in the readme file.
 1. [Dillinger:](http://dillinger.io/)
@@ -114,7 +112,7 @@
 ## Testing
 
 ---
-You can access the testing document by clicking [Here](https://github.com/JuanBrachoDev/DnD-Roller/docs/TESTING.md)
+You can access the testing document by clicking [Here](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/readme/testing.md).
 
 ## Deployment
 
@@ -180,10 +178,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Content
 
 -   [Dungeons & Dragons Dice Roller](https://www.wizards.com/dnd/dice/dice.htm) Inspiration for the project's theme.
+-   [Dungeons & Dragons](https://dnd.wizards.com/) All Dungeons and Dragons assets are property of Wizards of the Coast. You may find the Open Game License [Here](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/readme/open-game-license.md).
 
 ### Media
 
-- 'Dalelands Uncial Bold' and 'Draconis Regular' fonts: Personal licenses found under [Font Space](https://www.fontspace.com/category/dungeons-and-dragons).
+-   'Dalelands Uncial Bold' and 'Draconis Regular' fonts: Personal licenses found under [Font Space](https://www.fontspace.com/category/dungeons-and-dragons).
 -   DM Image: “Oracle Portrait” (c) by Justin Nichol is licensed under (CC BY-SA 3.0), content found in [OpenGameArt.Org](https://opengameart.org/content/oracle-portrait).
 -   Black Scales Background Image: “Black Scales” (c) by Alex Parker is licensed under (CC BY-SA 3.0), content found in [Toptal.com](https://www.toptal.com/designers/subtlepatterns/black-scales/).
 -   All Dice Images: “38 Dice icons” (c) by Game-Icons.net is licensed under (CC BY 3.0), content found in [Game-icons.net](https://game-icons.net/tags/dice.html).
