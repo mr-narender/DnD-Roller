@@ -14,12 +14,12 @@ $(document).ready($(function () {
 
 // Initialize Ability Modifiers
 function initAbilityModifiers() {
-    initLabel($('[for="str"]'), (parseInt(localStorage.getItem('str'))));
-    initLabel($('[for="dex"]'), (parseInt(localStorage.getItem('dex'))));
-    initLabel($('[for="con"]'), (parseInt(localStorage.getItem('con'))));
-    initLabel($('[for="int"]'), (parseInt(localStorage.getItem('int'))));
-    initLabel($('[for="wis"]'), (parseInt(localStorage.getItem('wis'))));
-    initLabel($('[for="cha"]'), (parseInt(localStorage.getItem('cha'))));
+    initAbilityScoresMods($('[for="str"]'), (parseInt(localStorage.getItem('str'))));
+    initAbilityScoresMods($('[for="dex"]'), (parseInt(localStorage.getItem('dex'))));
+    initAbilityScoresMods($('[for="con"]'), (parseInt(localStorage.getItem('con'))));
+    initAbilityScoresMods($('[for="int"]'), (parseInt(localStorage.getItem('int'))));
+    initAbilityScoresMods($('[for="wis"]'), (parseInt(localStorage.getItem('wis'))));
+    initAbilityScoresMods($('[for="cha"]'), (parseInt(localStorage.getItem('cha'))));
 }
 
 // Initialize Ability Scores
@@ -33,6 +33,7 @@ function initAbilityScores() {
 }
 
 function initProficiencyModifier() {
+    validateProfMod();
     initLabel($('[for="level"]'), (parseInt(localStorage.getItem('prof'))));
 }
 
@@ -115,7 +116,7 @@ function initLabel(label, number) {
         } else {
             $(label).append(` (+${number})`);
         }
-    } 
+    }
 }
     
 // Initializes a single checkbox.
@@ -134,6 +135,18 @@ function initInput(input, number) {
     return false;
 }
 
+
+// Initializes scores modifiers so they don't throw an error while 
+// calculating if none have been stored
+function initAbilityScoresMods(label, score) {
+    if (score) {
+        initLabel(label, score);
+    } else {
+        localStorage.setItem(`${label.prop('for')}`, '0')
+    }
+}
+
+
 // Briefly shows a tick to the user whenever a value is stored successfully.
 function acknowledgeTick(input) {
     input.tooltip('show');
@@ -148,22 +161,45 @@ function inputToInteger(input) {
     $(input).val(Math.floor(input.val())); 
 }
 
+// Ability score to ability score modifier formula 
 function abilityScoreToMod(score) {
     let mod = Math.floor((score - 10)/2);
     return mod;
 }
 
+// Level to proficiency modifier formula
 function levelToProf(level) {
     let prof = Math.ceil(1 + 1/4*(level));
     return prof;
 }
 
+// Validates text inputs in skill.
+function validateSkillMod(skill) {
+    let mod = parseInt($(`input[name = "${skill}-mod"]`).val());
+    if (-50 <= mod && mod <= 50) {
+    } else {
+        console.log('Invalid Skill Modifier.');
+        mod = 0;
+        $(`input[name = "${skill}-mod"]`).val(mod);
+    }
+    return mod;    
+}
+
+// Ensures a valid prof modifier is stored for calculations.
+function validateProfMod(skill) {
+    let prof = localStorage.getItem('prof');
+    if (prof) {
+    } else {
+        localStorage.setItem('prof', '0');
+    }
+}
+
 // Calculates the Ability Scores Modifiers.
 function calculateAbilityMod(ability) {
     if (1 <= ability.value && ability.value <= 30) {
-        let mod = abilityScoreToMod(ability.value);
         // Replaces the text in the input field with its floor value, since ability scores should only be integers.
         inputToInteger($(`input[name = "${ability.name}"]`));
+        let mod = abilityScoreToMod(ability.value);
         // Adds the modifier and score to localStorage.
         localStorage.setItem(`${ability.name}`, `${mod}`);
         localStorage.setItem(`${ability.name}-score`, `${ability.value}`);
@@ -220,34 +256,29 @@ function calculateSkillMod(input, ability) {
     let sum;
     // Adds the required ability modifier.
     sum = parseInt(localStorage.getItem(ability));
+    console.log(sum);
     // Replaces the text in the input field with its floor value, since modifiers should only be integers.
     inputToInteger($(`input[name = "${skill[0]}-mod"]`));
     // Validates the input in modifier and then adds both the modifier and the proficiency if 
     // proficiency checkbox is "checked", or only the modifier if unchecked.
-    let mod = parseInt($(`input[name = "${skill[0]}-mod"]`).val());
-    if (-50 <= mod && mod <= 50) {
-        if ($(`input[name = "${skill[0]}-prof"]`).prop("checked")) {
-            sum = sum + mod + parseInt(localStorage.getItem("prof"));
-            localStorage.setItem(`${skill[0]}-prof`, 'checked');
-            localStorage.setItem(`${skill[0]}-mod`, `${mod}`);
-        } else {
-            sum = sum + mod;
-            localStorage.setItem(`${skill[0]}-prof`, 'unchecked');
-            localStorage.setItem(`${skill[0]}-mod`, `${mod}`);
-        }
-        // Adds a "+" to the modifier in the label if it is positive.
-        if (sum <= 0) {
-            $(`label[for = "${skill[0]}"]`).html(`${$(`label[for = "${skill[0]}"]`).attr("title")} (${(sum)})`);     
-        } else {
-            $(`label[for = "${skill[0]}"]`).html(`${$(`label[for = "${skill[0]}"]`).attr("title")} (+${(sum)})`); 
-        }
-        // Stores the value of the modifier in localStorage
-        localStorage.setItem(`${skill[0]}`, `${sum}`);
-        acknowledgeTick($(`input[name = "${$(input).attr("name")}"]`)); 
-    // Error message in case the input is invalid.
+    let mod = validateSkillMod(skill[0]);
+    if ($(`input[name = "${skill[0]}-prof"]`).prop("checked")) {
+        sum = sum + mod + parseInt(localStorage.getItem("prof"));
+        localStorage.setItem(`${skill[0]}-prof`, 'checked');
+        localStorage.setItem(`${skill[0]}-mod`, `${mod}`);
     } else {
-        mod.value = 0;
-        console.log("Invalid modifier input.");
+        sum = sum + mod;
+        localStorage.setItem(`${skill[0]}-prof`, 'unchecked');
+        localStorage.setItem(`${skill[0]}-mod`, `${mod}`);
     }
+    // Adds a "+" to the modifier in the label if it is positive.
+    if (sum <= 0) {
+        $(`label[for = "${skill[0]}"]`).html(`${$(`label[for = "${skill[0]}"]`).attr("title")} (${(sum)})`);     
+    } else {
+        $(`label[for = "${skill[0]}"]`).html(`${$(`label[for = "${skill[0]}"]`).attr("title")} (+${(sum)})`); 
+    }
+    // Stores the value of the modifier in localStorage
+    localStorage.setItem(`${skill[0]}`, `${sum}`);
+    acknowledgeTick($(`input[name = "${$(input).attr("name")}"]`)); 
     return false;
 }

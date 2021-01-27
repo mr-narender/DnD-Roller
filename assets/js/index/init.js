@@ -29,9 +29,16 @@ function clearDice() {
     return false;
 }
 
+// Ensures only integers are input.
+function inputToInteger(input) {
+    $(input).val(Math.floor(input.val())); 
+}
+
 // Checks that the dice amount is valid.
 function validateDice(die) {
     if (0 <= die.value && die.value <= 30) {
+        // Replaces the text in the input field with its floor value, since dice should only be integers.
+        inputToInteger($(`input[name = "${die.name}"]`));
     } else {
         die.value = 0;
         console.log('Wrong amount of dice');
@@ -42,6 +49,8 @@ function validateDice(die) {
 // Checks that the modifier is valid.
 function validateModifier(mod) {
     if (-50 <= mod.value && mod.value <= 50) {
+        // Replaces the text in the input field with its floor value, modifiers should only be integers.
+        inputToInteger($(`input[name = "${mod.name}"]`));
     } else {
         mod.value = 0;
         console.log('Invalid modifier.');
