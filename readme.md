@@ -10,17 +10,17 @@
 
     -   #### As a player I need to:
 
-        - Be able to roll dice for attack, damage and skill rolls.
+        - Be able to roll dice for attack, damage, and skill rolls.
         - Be able to easily tell if my dice rolls are either the best or the worst.
         - Be able to store my character's stats so I can easily return to it between sessions.
         - Be able to understand the interface if I don't have much experience with DnD.
         - Be able to send feedback back to the developer in case I need anything else readily available in my dice roller.
 
 -   ### Design
-    -   #### Color Scheme
-        The main colors used throughout the page are: 
+    -   #### Colour Scheme
+        The main colours used throughout the page are: 
         -   **ghostwhite** for most of the text and button mouseovers.
-        -   **#red** for the the burger menu title and the button menu borders. 
+        -   **#red** for the burger menu title and the button menu borders. 
         -   **#lightgray** for most of the buttons. 
           
         All of these are contrasted with ***black scales*** in the background, most of the interface is designed around an elegant dark mode, while keeping some of the iconic red, the colorful dice often found in shops, and the black dragon scales to further depict the fantasy around the game.
@@ -31,7 +31,7 @@
             -   **"Draconis Regular"** for the rest of the text, with **"sans-serif"** as fallback, this gives the page a stylish fantasy feel while remaining legible enough.
             
     -   #### Imagery
-        -   Coloured dice where chosen to break the monotone design and enhance the fun appearance of the tool. 
+        -   Coloured dice were chosen to break the monotone design and enhance the fun appearance of the tool. 
         -   A blindfolded oracle was introduced as the character that guides users through the tutorial, mimicking an interaction that could be found within the game.
 
 *   ### Wireframes
@@ -45,10 +45,10 @@
 ---
 
 -   ### Menu
-       Allows the user to easily navigate from page to page. Showcases a burger menu for smaller devices, while showing a three button menu for larger ones.
+       Allows the user to easily navigate from page to page. Showcases a burger menu for smaller devices, while showing a three-button menu for larger ones.
 
 -   ### Attack Roll
-       Grants the ability to roll an *attack-roll*, it rolls 1d20 (one twenty-sided die) by default and allows the user to choose different modifiers to add, including *advantage*/*disadvantage* on the roll, which rolls twice and picks the bigger/smaller roll respectively.
+       Grants the ability to roll an *attack-roll*, it rolls 1d20 (one twenty-sided die) by default and allows the user to choose different modifiers to add, including *advantage*/*disadvantage* on the roll, which rolls twice and picks the bigger/smaller roll, respectively.
 
 -   ### Free Roll
        Provides the user the means to select and roll any combination of dice that the user needs, and finally add the modifiers required.
@@ -60,10 +60,10 @@
        Plenty of the most common modifiers are selectable from the roller page, some fetch information stored in the character sheet page, like the *ability score* modifiers and *proficiency* modifier. A general modifier can be typed in directly from the roller page. As well as the option of *advantage* and *disadvantage* for *attack-rolls*.
 
 -   ### Tutorials
-       Both the roller and character sheet pages feature an interactive tutorial that gives unfamiliar users a quick rundown of the page, its parts and functions.
+       Both the roller and character sheet pages feature an interactive tutorial that gives unfamiliar users a quick rundown of the page, its parts, and functions.
 
 -   ### Character Sheet
-       Gives users a small and simple character sheet where they can store core information about their characters so modifiers and other calculations are done automatically. The character sheet is stored in ***Local Storage*** so the character's data is saved between different sessions.
+       Gives users a small and simple character sheet where they can store core information about their characters, so modifiers and other calculations are done automatically. The character sheet is stored in ***Local Storage*** so the character's data is saved between different sessions.
 
 -   ### Send Feedback
        Enables users to send a message to the developer in case bugs are found, or any suggestions/ideas surge for the project.
@@ -83,7 +83,7 @@
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Chrome DevTools:](https://developers.google.com/web/tools/chrome-devtools)
-    - Chrome's DeveTools were used throughout the project to test the layout and make the necessary adjustments.
+    - Chrome's DevTools were used throughout the project to test the layout and make the necessary adjustments.
 1. [Font Space:](https://www.fontspace.com/)
     - Font Space was used to download the 'Dalelands Uncial Bold' and 'Draconis Regular' fonts which are used on all pages.
 1. [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)
