@@ -8,13 +8,13 @@
         <meta name="description"
             content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
         <!-- Libraries -->
-        <link rel="preload" href="assets/css/common.css" as="style">
+        <link rel="preload" href="assets/css/fonts.css" as="style">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
         <link rel="stylesheet" href="assets/css/common.css">
         <link rel="stylesheet" href="assets/css/index.css">
-        <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="assets/css/fonts.css">
         <title>DnD Roller</title>
     </head>
 
@@ -82,81 +82,81 @@
                     <div class="col-12 col-lg-7 g-2 border-section">
                         <div class="row g-2">
                             <!-- d20 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center step-2">
+                            <div class="col-4 d-flex align-items-center step-2">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d20" class="form-control number-of-dice" aria-label="Amount of d20">
                             </div>
                             <div class="col-4 responsive-dice step-1">
                                 <img src="assets/images/d20.png" alt="20-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify justify-content-center">
                                 <button class="btn step-3" onclick="return addDice('d20');" aria-label="Add d20"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn step-4" onclick="return subtractDice('d20');" aria-label="Subtract d20"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d12 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
+                            <div class="col-4 d-flex align-items-center">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d12" class="form-control number-of-dice" aria-label="Amount of d12">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d12.png" alt="12-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return addDice('d12');" aria-label="Add d12"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return subtractDice('d12');" aria-label="Subtract d12"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d10 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
+                            <div class="col-4 d-flex align-items-center">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d10" class="form-control number-of-dice" aria-label="Amount of d10">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d10.png" alt="10-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return addDice('d10');" aria-label="Add d10"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return subtractDice('d10');" aria-label="Subtract d10"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d8 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
+                            <div class="col-4 d-flex align-items-center">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d8" class="form-control number-of-dice" aria-label="Amount of d8">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d8.png" alt="8-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return addDice('d8');" aria-label="Add d8"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return subtractDice('d8');" aria-label="Subtract d8"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d6 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
+                            <div class="col-4 d-flex align-items-center">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d6" class="form-control number-of-dice" aria-label="Amount of d6">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d6.png" alt="6-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return addDice('d6');" aria-label="Add d6"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return subtractDice('d6');" aria-label="Subtract d6"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                             <!-- d4 -->
-                            <div class="offset-lg-2 col-lg-2 col-4 d-flex align-items-center">
+                            <div class="col-4 d-flex align-items-center">
                                 <input onblur="validateDice(this);" type="text" value="0" name="d4" class="form-control number-of-dice" aria-label="Amount of d4">
                             </div>
                             <div class="col-4 responsive-dice">
                                 <img src="assets/images/d4.png" alt="4-sided die">
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return addDice('d4');" aria-label="Add d4"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
-                            <div class="p-1 col-2 d-flex align-items-center">
+                            <div class="p-1 col-2 d-flex align-items-center justify-content-center">
                                 <button class="btn" onclick="return subtractDice('d4');" aria-label="Subtract d4"><i class="fa fa-minus" aria-hidden="true"></i></button>
                             </div>
                         </div>
@@ -278,9 +278,6 @@
                 </div>
             </div>
         </section> 
-        <!-- Local libraries -->
-        <script src="assets/js/index/init.js"></script>
-        <script src="assets/js/tutorial/indexTutorial.js"></script>
         <!-- External libraries -->
         <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -292,6 +289,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <!-- Local libraries -->
+        <script src="assets/js/index/init.js"></script>
+        <script src="assets/js/tutorial/indexTutorial.js"></script>
     </body>
 
 </html>

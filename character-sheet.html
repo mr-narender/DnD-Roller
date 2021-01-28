@@ -8,13 +8,13 @@
     <meta name="description"
         content="DnD Roller is the tool every player needs, designed for DnD 5th Edition it allows everyone to roll dice in a simple manner, while making sure your data is stored so it isn't lost between sessions.">
     <!-- Libraries -->
-    <link rel="preload" href="assets/css/common.css" as="style">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/character-sheet.css">
-    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preload" href="assets/css/fonts.css" as="style">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/character-sheet.css">
+        <link rel="stylesheet" href="assets/css/fonts.css">
     <title>DnD Roller</title>
 </head>
 
@@ -58,39 +58,39 @@
                 <div class="col-12 col-lg-6 border-section">
                     <div class="row">
                         <h2 class="col-12">Ability Scores</h2>
-                        <div class="offset-2 col-8 step-1">
+                        <div class="col-6 step-1">
                             <label class="col-12" for="str">STR</label>
-                            <input id="str" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="str" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="str" type="text">
                         </div>
-                        <div class="offset-2 col-8">
+                        <div class="col-6">
                             <label class="col-12" for="dex">DEX</label>
-                            <input id="dex" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="dex" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>"
                             onblur="calculateAbilityMod(this);" name="dex" type="text">
                         </div>
-                        <div class="offset-2 col-8">
+                        <div class="col-6">
                             <label class="col-12" for="con">CON</label>
-                            <input id="con" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="con" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="con" type="text">
                         </div>
-                        <div class="offset-2 col-8">
+                        <div class="col-6">
                             <label class="col-12" for="int">INT</label>
-                            <input id="int" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="int" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="int" type="text">
                         </div>
-                        <div class="offset-2 col-8">
+                        <div class="col-6">
                             <label class="col-12" for="wis">WIS</label>
-                            <input id="wis" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="wis" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="wis" type="text">
                         </div>
-                        <div class="offset-2 col-8">
+                        <div class="col-6">
                             <label class="col-12" for="cha">CHA</label>
-                            <input id="cha" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="cha" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAbilityMod(this);" name="cha" type="text">
                         </div>
@@ -102,19 +102,19 @@
                         <h2 class="col-12">Character</h2>
                         <div class="offset-2 col-8 step-2">
                             <label class="col-12" for="level">Level</label>
-                            <input id="level" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="level" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateProf(this);" name="level" type="text">
                         </div>
-                        <div class="offset-2 col-8 step-3">
+                        <div class="col-6 step-3">
                             <label class="col-12" for="attack-mod">Attack Mod</label>
-                            <input id="attack-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="attack-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAtkDmgMod(this);" name="attack-mod" type="text">
                         </div>
-                        <div class="offset-2 col-8 step-4">
+                        <div class="col-6 step-4">
                             <label class="col-12" for="damage-mod">Damage Mod</label>
-                            <input id="damage-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
+                            <input class="col-6" id="damage-mod" data-toggle="tooltip" data-placement="right" data-html="true" 
                             data-trigger="manual" data-title="<i class='fa fa-check'></i>" 
                             onblur="calculateAtkDmgMod(this);" name="damage-mod" type="text">
                         </div>
@@ -348,8 +348,6 @@
             </div>
         </form>
     </section>
-    <!-- Local libraries -->
-    <script src="assets/js/tutorial/characterSheetTutorial.js"></script>
     <!-- External libraries -->
     <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -361,7 +359,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <!-- Init -->
+    <!-- Local libraries -->
+    <script src="assets/js/tutorial/characterSheetTutorial.js"></script>
     <script src="assets/js/character-sheet/init.js"></script>
 </body>
 

@@ -95,7 +95,7 @@ function colorDice(result, max) {
 
 // Rolls a single n-sided die.
 function rollDie(sides) {
-    result = Math.floor((Math.random() * sides) + 1);
+    let result = Math.floor((Math.random() * sides) + 1);
     return result;
 }
 
@@ -134,16 +134,16 @@ function clearResults(){
 // Adds proficiency modifier if proficiency checkbox is ticked. 
 function addProficiency() {
     if ($(`input[name = "proficiency"]`).prop("checked")) {
-        addModifiers(parseInt(localStorage.prof));
+        addModifiers(parseInt(character.prof));
     }
 }
 
 // Adds ability modifier whenever applicable.
 function addAbilityModifier() {
     if ($("#ability-menu").val() !== "None") {
-        let abilityMod = localStorage.getItem(`${$("#ability-menu").val().toLowerCase()}`); 
+        let abilityMod = parseInt(character[`${$("#ability-menu").val().toLowerCase()}`]); 
         addModifiers(parseInt(abilityMod));
-    }
+    } 
 }
 
 // Adds other modifier.
@@ -178,7 +178,7 @@ function skillRoll(skill) {
     // Adds the result so far.
     addResult(result);
     // Adds skill modifiers.
-    let skillMod = localStorage.getItem(`${skill}`); 
+    let skillMod = parseInt(character[`${skill}`]); 
     addModifiers(parseInt(skillMod));
     // Adds other modifiers.
     addOtherModifier();
@@ -206,7 +206,7 @@ function atkRoll() {
     // Adds ability modifier whenever applicable.
     addAbilityModifier();
     // Adds attack modifier.
-    addModifiers(parseInt(localStorage.getItem('attack-mod')));
+    addModifiers(parseInt(character['attack-mod']));
     // Adds other modifiers.
     addOtherModifier();
     // Clears the last "+" in input.
@@ -232,7 +232,7 @@ function freeRoll() {
     // Adds ability modifier whenever applicable.
     addAbilityModifier();
     // Adds damage modifier.
-    addModifiers(parseInt(localStorage.getItem('damage-mod')));
+    addModifiers(parseInt(character['damage-mod']));
     // Adds other modifier.
     addOtherModifier();
     // Clears dice selection
@@ -243,3 +243,6 @@ function freeRoll() {
     showResults();  
     return false;
 }
+
+// Initialize character object.
+let character = JSON.parse(localStorage.getItem('character'));

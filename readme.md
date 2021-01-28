@@ -1,6 +1,6 @@
 # DnD Roller
 
-![Am I responsive](am-i-responsive.png)
+![Am I responsive](docs/readme/am-i-responsive.png)
 
 ## User Experience (UX)
 
