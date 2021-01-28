@@ -86,7 +86,7 @@
     - Chrome's DevTools were used throughout the project to test the layout and make the necessary adjustments.
 1. [Font Space:](https://www.fontspace.com/)
     - Font Space was used to download the 'Dalelands Uncial Bold' and 'Draconis Regular' fonts which are used on all pages.
-1. [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)
+1. [Font Squirrel:](https://www.fontsquirrel.com/tools/webfont-generator)
     - Font Squirrel was the tool used to transform the downloaded fonts into files that could be added to the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used to add icons like the ones used in the add/remove buttons, and the tutorial floating action button.
@@ -98,7 +98,7 @@
     - Tool used to create the dice logos.
 1. [jQuery:](https://jquery.com/)
     - jQuery was used to enhance JavaScript code, providing useful methods and selectors to it.
-1. [Git](https://git-scm.com/)
+1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
