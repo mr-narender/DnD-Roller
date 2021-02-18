@@ -244,5 +244,9 @@ function freeRoll() {
     return false;
 }
 
-// Initialize character object.
-let character = JSON.parse(localStorage.getItem('character'));
+// Initialize character object
+let character = {};
+
+    if (JSON.parse(localStorage.getItem('character'))) {
+        character = JSON.parse(localStorage.getItem('character'));
+    }

@@ -1,9 +1,11 @@
+// Loads stored character or creates a blank one if none exist
 function initCharacter() {
     let character = generateBlankCharacter();
     character = checkForStoredCharacter(character);
     return character;
 }
 
+// Generates a blank character
 function generateBlankCharacter(){
     let blankCharacter = {
         'str' : 0,
@@ -17,6 +19,7 @@ function generateBlankCharacter(){
     return blankCharacter;
 }
 
+// Checks if a character has been stored and replaces the character entered with stored values
 function checkForStoredCharacter(newCharacter) {
     let storedCharacter = JSON.parse(localStorage.getItem('character'));
     if (storedCharacter) {
@@ -25,6 +28,7 @@ function checkForStoredCharacter(newCharacter) {
     return newCharacter;
 }
 
+// Stores character data in localStorage
 function storeCharacterData(property, value){
     character[`${property}`] = value;
     localStorage.setItem('character', JSON.stringify(character));
@@ -55,6 +59,7 @@ function initAbilityScores() {
     initInput($('[name="cha"]'), parseInt(character['cha-score']));
 }
 
+// Initialize Proficiency Modifier
 function initProficiencyModifier() {
     initLabel($('[for="level"]'), parseInt(character.prof));
 }
@@ -88,6 +93,7 @@ function initSkillLabels() {
     initLabel($('[for="survival"]'), parseInt(character.survival));
 }
 
+// Initialize Skill text inputs
 function initSkillInputs() {
     initInput($('[name="acrobatics-mod"]'), parseInt(character['acrobatics-mod']));
     initInput($('[name="animalhandling-mod"]'), parseInt(character['animalhandling-mod']));
@@ -109,6 +115,7 @@ function initSkillInputs() {
     initInput($('[name="survival-mod"]'), parseInt(character['survival-mod']));
 }
 
+// Initialize Skill checkbox inputs
 function initSkillCheckboxes() {
     initCheckbox($('[name="acrobatics-prof"]'), character['acrobatics-prof']);
     initCheckbox($('[name="animalhandling-prof"]'), character['animalhandling-prof']);
