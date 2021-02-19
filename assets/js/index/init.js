@@ -125,6 +125,13 @@ function rollAdvantageOrDisadvantage() {
     return result;
 }
 
+// Displays message if results are empty after free roll
+function noResults(){
+    if ($("#result").html() == "") {
+        $("#result").html("No dice or modifiers selected.")
+    }
+}
+
 // Clears results and sum-dice.
 function clearResults(){
     $("#result").html("");
@@ -146,7 +153,7 @@ function addAbilityModifier() {
     } 
 }
 
-// Adds other modifier.
+// Adds the 'other' modifier found in the index form.
 function addOtherModifier() {
     addModifiers(parseInt($(`input[name = "modifier"]`).val()));
 }
@@ -240,7 +247,8 @@ function freeRoll() {
     // Clears the last "+" in input.
     clearLastOperator();
     // Shows result section if hidden. 
-    showResults();  
+    showResults();
+    noResults();
     return false;
 }
 
