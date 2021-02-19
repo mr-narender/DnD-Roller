@@ -203,6 +203,7 @@ function skillRoll(skill) {
     showResults();
     // Scrolls to top.
     window.scrollTo({top: 0, behavior: 'smooth'});
+    tumbleDie();
     return false;
 }
 
