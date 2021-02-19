@@ -11,6 +11,23 @@ button:hover{
 
 /*--------------------------------Dice */
 
+.tumbling-dice{
+    height: 30px;
+    width: 30px;
+
+}
+
+.tumble{
+    animation: tumbling 0.3s 1;
+}
+
+@keyframes tumbling {
+  0%   {transform: rotate(20deg);}
+  33%  {transform: rotate(-40deg);}
+  66%  {transform: rotate(40deg);}
+  100% {transform: rotate(-20deg);}
+}
+
 /* Makes dice responsive */
 .responsive-dice img{
     max-width: 100px;

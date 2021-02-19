@@ -128,8 +128,16 @@ function rollAdvantageOrDisadvantage() {
 // Displays message if results are empty after free roll
 function noResults(){
     if ($("#result").html() == "") {
-        $("#result").html("No dice or modifiers selected.")
+        $("#result").html("No dice or relevant modifiers selected.")
     }
+}
+
+// Triggers tumbling die's animation
+function tumbleDie(){
+    $("#tumbling-die").addClass("tumble")
+    setTimeout(function(){
+        $("#tumbling-die").removeClass("tumble") 
+    }, 300);
 }
 
 // Clears results and sum-dice.
@@ -219,7 +227,8 @@ function atkRoll() {
     // Clears the last "+" in input.
     clearLastOperator();
     // Shows result section if hidden. 
-    showResults();    
+    showResults();  
+    tumbleDie();
     return false;
 }
 
@@ -249,6 +258,7 @@ function freeRoll() {
     // Shows result section if hidden. 
     showResults();
     noResults();
+    tumbleDie();
     return false;
 }
 
