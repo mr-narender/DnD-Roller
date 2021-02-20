@@ -283,4 +283,4 @@ function freeRoll() {
 }
 
 // Initialize character object
-character = loadCharacter();
+let character = loadCharacter();

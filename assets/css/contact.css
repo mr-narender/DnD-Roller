@@ -7,3 +7,9 @@ input{
 #acknowledge-modal{
     color: black;
 }
+
+/* Mouseover effect for submit button */
+button:hover{
+    background-color: ghostwhite;
+    border-color: ghostwhite;
+}
