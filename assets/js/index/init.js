@@ -1,3 +1,22 @@
+// Loads character and stores a blank one if none was found.
+function loadCharacter() {
+    let character = {
+        'str' : 0,
+        'dex' : 0,
+        'con' : 0,
+        'int' : 0,
+        'wis' : 0,
+        'cha' : 0,
+        'prof' : 0,
+    };
+    
+    if (JSON.parse(localStorage.getItem('character'))) {
+        character = JSON.parse(localStorage.getItem('character'));
+    }
+    localStorage.setItem('character', JSON.stringify(character));
+    return character;
+}
+
 // Adds 1 die to the respective row of dice clicked, while preventing going over 30.
 function addDice(die) {
     if (+$(`input[name = "${die}"]`).val() < 30 ) {
@@ -128,15 +147,15 @@ function rollAdvantageOrDisadvantage() {
 // Displays message if results are empty after free roll
 function noResults(){
     if ($("#result").html() == "") {
-        $("#result").html("No dice or relevant modifiers selected.")
+        $("#result").html("No dice or relevant modifiers selected.");
     }
 }
 
 // Triggers tumbling die's animation
 function tumbleDie(){
-    $("#tumbling-die").addClass("tumble")
+    $("#tumbling-die").addClass("tumble");
     setTimeout(function(){
-        $("#tumbling-die").removeClass("tumble") 
+        $("#tumbling-die").removeClass("tumble");
     }, 300);
 }
 
@@ -264,8 +283,4 @@ function freeRoll() {
 }
 
 // Initialize character object
-let character = {};
-
-    if (JSON.parse(localStorage.getItem('character'))) {
-        character = JSON.parse(localStorage.getItem('character'));
-    }
+character = loadCharacter();

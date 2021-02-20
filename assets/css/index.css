@@ -11,10 +11,10 @@ button:hover{
 
 /*--------------------------------Dice */
 
+/* Adds dice icon to Results section and allows it to tumble when dice are rolled */
 .tumbling-dice{
     height: 30px;
     width: 30px;
-
 }
 
 .tumble{
