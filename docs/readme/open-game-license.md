@@ -1,4 +1,4 @@
-Go back to original [document](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/readme/readme.md).
+Go back to original [document](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/readme.md).
 
 >Permission to copy, modify and distribute the files collectively known as the System Reference Document 5.1 (“SRD5”) is granted solely through the use of the Open Gaming License, Version 1.0a. This material is being released using the Open Gaming License Version 1.0a and you should read and understand the terms of that License before using this material.
 
