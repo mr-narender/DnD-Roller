@@ -1,4 +1,4 @@
-Go back to original [document](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/docs/readme/readme.md).
+Go back to original [document](https://github.com/JuanBrachoDev/DnD-Roller/tree/master/readme.md).
 
 ### Validation
 
@@ -128,8 +128,12 @@ The following features were tested for **contact.html**:
 -   Checkboxes in character sheet weren't resizing according to their set style in CSS.
        > The checkbox and the text input were arranged using the grid design at first. Had to remove the **.col** classes as bootstrap was overriding the local styles. 
 
+-   Rolls would not work if a new user tried them without entering stats in **character-sheet.html**.
+       > Bug happened because the rolls would try fetch a 'null' character. The `loadCharacter()` function was created so it checked if a character was saved upon loading the page, and created a blank character if none was found.
+
 ### Known Bugs
 
 ---
 
 -   The tutorial tooltip sometimes clips off the viewport on smaller devices after highlighting an element that might be close to the edge of the screen.
+-  The checkboxes and text inputs within the Skills section in **character-sheet.html** sometimes trigger whenever an area close to the respective fields are clicked, instead of triggering only while interacting with the field itself.
